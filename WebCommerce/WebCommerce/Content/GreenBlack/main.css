@@ -1,0 +1,46 @@
+﻿
+.buttonsubmit {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    font-size: large;
+    padding-right: 100px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #26b864;
+    border-radius: 20px;
+    background-image: url(../../Images/GreenBlack/green_right.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    outline: none;
+}
+
+    .buttonsubmit:focus {
+        background-color: #26b864;
+        outline: none;
+    }
+
+    .buttonsubmit:hover {
+        background-color: #45d080;
+        outline: none;
+    }
+
+    .buttonsubmit:active {
+        background-color: #21874d;
+        background-image: url(../../Images/GreenBlack/green_right.png);
+        outline: none;
+    }
+
+.wrapcontent {
+    width: auto;
+}
+
+.border {
+    border-radius: 7px;
+    border-color: #4469bd;
+    border-width: 1px;
+    border-style: inset;
+    padding-left: 30px;
+    margin-top: 40px;
+}

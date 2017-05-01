@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.LayoutTitle = "Template";
+    ViewBag.Menu1 = "Home";
+    ViewBag.Menu2 = "Buttons";
+    ViewBag.Menu3 = "Input";
+    ViewBag.Menu4 = "Table";
+    ViewBag.Menu5 = "Slide";
+    Layout = "~/Views/Shared/GreenBlackLayout.cshtml";
+
+}
+
+<style>
+    div#table th {
+        background-color: #003366;
+        color: white;
+        font-size: 15px;
+    }
+
+    div#table tr,
+    div#table th,
+    div#table td {
+        border: 0.5px solid gray;
+        text-align: center;
+        padding: 6px;
+        vertical-align: middle;
+    }
+</style>
+<link href="~/Content/GreenBlack/main.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-table.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-table.js"></script>
+
+<script src="~/Scripts/GreenBlack/main.js"></script>
+@*Button*@
+@section Menu2{
+
+    <div class="container">
+        <div class="col-sm-1 col-md-2">
+            <button id="defaultButton" class="btn btn-default ">Default Button »</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-default ">Allow Button »</button>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-default disabled">Disabled Button »</button>
+        </div>
+    </div>
+}
+
+@*Input*@
+
+
+@section Menu3{
+    <div class="container">
+        <div class="form-horizontal col-md-10">
+            <div class="row form-group">
+                <label class="col-md-2 control-label" for="Required">Required </label>
+                <div class="col-md-3">
+                    <input class="form-control" data-val="true" data-val-required="This input is required." id="Required" name="Required" type="text" value="">
+                </div>
+            </div>
+            <div class="row form-group">
+                <label class="col-md-2 control-label" for="Password">Password: </label>
+                <div class="col-md-3">
+                    <input class="form-control" data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Password" name="Password" type="password">
+                </div>
+            </div>
+            <div class="row form-group">
+                <label class="col-md-2 control-label" for="ConfirmPassword">Confirm password</label>
+                <div class="col-md-3">
+                    <input class="form-control" data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" type="password">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-offset-2 col-md-3">
+                    <input type="button" class="btn btn-default form-control buttonsubmit wrapcontent" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@*Table*@
+
+
+@section Menu4{
+    <div id="table" class="col-md-10 col-md-offset-1">
+        <table data-toggle="table"
+               data-url="/api/Demo"
+               data-show-refresh="true"
+               data-show-columns="true"
+               data-show-toggle="true"
+               data-show-pagination-switch="true">
+            <thead>
+                <tr>
+                    <th data-field="action" class="action col-md-1"
+                        data-formatter="actionFormatter" data-events="actionEvents">
+                        Hành động
+                    </th>
+                    <th data-field="Id" class="avatar col-md-1">Id</th>
+                    <th data-field="Name">Name</th>
+                    <th data-field="Decription">Decription</th>
+                </tr>
+            </thead>
+        </table>
+</div>
+}
+
+@*Slide*@
+
+@section Menu5{
+    <div>
+        <div class="container">
+            <div class="col-sm-1 col-md-2">
+                <button id="defaultButton" class="btn btn-default ">Default Button »</button>
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-default ">Allow Button »</button>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-default ">Disabled Button »</button>
+            </div>
+        </div>
+    </div>
+}
+
+<h2>Template</h2>
+

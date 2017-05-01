@@ -1,0 +1,16 @@
+﻿@using Model;
+
+@{
+    ViewBag.Title = "Index";
+    List<PhanSo> phanSos = ViewBag.PhanSos;
+}
+
+@foreach (var item in phanSos)
+{
+    <div>@item.TuSo</div>
+    <div>@item.MauSo</div>
+    <div></div>
+}
+
+<h2>Index</h2>
+
