@@ -1,0 +1,15 @@
+﻿TC: 
+- Thời gian trả về + thời gian timoue
+- Stress test:
+ + Cho 1 user truy cập: thời gian load 1 trang web là bao nhiêu?
+ + Cho 2 user truy cập hoặc yêu cầu 1 trang cùng lúc: web load trong bao lâu?
+ + Cho 10..
+ + Cho 1000... -> Hệ thống có đáp ứng hk?
+	o Nếu có, tiếp tục tăng số lượng user
+	o Nếu không, giảm lần -> từ đó đưa ra mức: SL người dùng tối đa
+ + Bộ nhớ tối thiểu ??? > Khó quá bỏ qua
+ + Ổ cứng bao nhiêu là đủ dung lượng ??? > Khó quá bỏ qua
+- Insert nhiều dòng dữ liệu vào CSDL : 100 > 1000 dòng
+	+ hệ thống mất bao nhiêu thời gian để đáp ứng?
+
+ ==> Từ đó viết testcase có thông số để test cho cái web hoàn chỉnh sau này
