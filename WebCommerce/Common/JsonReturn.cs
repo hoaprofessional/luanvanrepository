@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.App_LocalResources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace Common
 {
     public class JsonReturn
     {
+
        // public static JsonResult
     }
 }

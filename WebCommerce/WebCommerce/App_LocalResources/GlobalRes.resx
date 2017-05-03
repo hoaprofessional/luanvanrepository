@@ -123,4 +123,10 @@
   <data name="InvalidLoginInfomation" xml:space="preserve">
     <value>Invalid username or password.</value>
   </data>
+  <data name="WebsiteSlogan" xml:space="preserve">
+    <value>High quality goods at affordable prices</value>
+  </data>
+  <data name="WebsiteTitle" xml:space="preserve">
+    <value>Foreign Commerce</value>
+  </data>
 </root>

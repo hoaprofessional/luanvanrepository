@@ -1,4 +1,5 @@
-﻿using Repository;
+﻿using Common.App_LocalResources;
+using Repository;
 using Service;
 using System;
 using System.Collections.Generic;
@@ -6,50 +7,29 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebCommerce.App_LocalResources;
+using ViewModel;
 
 namespace WebCommerce.Controllers
 {
     public class HomeController : Controller
     {
-        IUserService _userService;
+        private IUserService _userService;
         private IDemoService _demoService;
+        private IMenuService _menuService;
+        private ICategoryService _categoryService;
 
-        public HomeController(IDemoService demoService, IUserService userService)
+        public HomeController(IDemoService demoService, IUserService userService,IMenuService menuService,ICategoryService categoryService)
         {
             _demoService = demoService;
             _userService = userService;
+            _menuService = menuService;
+            _categoryService = categoryService;
         }
 
         public ActionResult Index()
         {
-       //     _demoService.Add(new Model.Demo() { Name = "Hung " });
-       //     _demoService.Save();
-            
-            //Stopwatch time1, time2;
-            //time1 = new Stopwatch();
-            //time2 = new Stopwatch();
-
-            //int loop = 10;
-
-            //_userService.GetUsersByRoleName2("Admin");
-
-            //time1.Start();
-            //for(int i=0;i<loop;i++)
-            //{
-            //    var s = _userService.GetUsersByRoleName2("Admin");
-            //}
-            //time1.Stop();
-
-            //time2.Start();
-            //for (int i = 0; i < loop; i++)
-            //{
-            //    var s = _userService.GetUsersByRoleName("Admin");
-            //}
-            //time2.Stop();
-
-
-            ViewBag.Title = GlobalRes.HomePageTitle;
+            ViewBag.Menus = _menuService.GetAllMenu();
+            ViewBag.RootCategoryViewModel = _categoryService.RootCategoryViewModel();
             return View();
         }
 
@@ -62,8 +42,8 @@ namespace WebCommerce.Controllers
 
         public ActionResult Contact()
         {
+            ViewBag.Menus = _menuService.GetAllMenu();
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
 

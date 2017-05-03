@@ -219,6 +219,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\PhanSoController.cs" />
+    <Compile Include="Controllers\TempController.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -247,26 +248,43 @@
     <Content Include="Content\GreenBlack\normalize.min.css" />
     <Content Include="Content\GreenBlack\templatemo_misc.css" />
     <Content Include="Content\GreenBlack\templatemo_style.css" />
-    <Content Include="css\basictable.css" />
-    <Content Include="css\bootstrap.min.css" />
-    <Content Include="css\font-awesome.css" />
-    <Content Include="css\icon-font.min.css" />
-    <Content Include="css\jqcandlestick.css" />
-    <Content Include="css\jquery-ui.css" />
-    <Content Include="css\lightbox.css" />
-    <Content Include="css\monthly.css" />
-    <Content Include="css\morris.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\font-ubuntu.css" />
+    <Content Include="css\im-icons.css" />
+    <Content Include="css\large.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\medium.css" />
+    <Content Include="css\normal.css" />
+    <Content Include="css\print.css" />
     <Content Include="css\style.css" />
-    <Content Include="css\table-style.css" />
+    <Content Include="css\style289d.css" />
+    <Content Include="css\style6b43.css" />
+    <Content Include="css\style6f58.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\linecons.svg" />
-    <Content Include="fonts\revicons.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\arrow_down.png" />
+    <Content Include="Images\arrow_left.png" />
+    <Content Include="Images\arrow_right.png" />
+    <Content Include="Images\arrow_up.png" />
+    <Content Include="Images\button_pm_forward.png" />
+    <Content Include="Images\button_pm_new.png" />
+    <Content Include="Images\button_pm_reply.png" />
+    <Content Include="Images\button_topic_locked.png" />
+    <Content Include="Images\button_topic_new.png" />
+    <Content Include="Images\button_topic_reply.png" />
+    <Content Include="Images\close_popup.png" />
+    <Content Include="Images\corners_left.png" />
+    <Content Include="Images\corners_right.png" />
+    <Content Include="Images\filecd23.png" />
+    <Content Include="Images\fontawesome-webfontba72.svg" />
+    <Content Include="Images\forum_link.png" />
+    <Content Include="Images\forum_link.svg" />
+    <Content Include="Images\forum_read.png" />
+    <Content Include="Images\forum_read.svg" />
     <Content Include="Images\GreenBlack\active-state.png" />
     <Content Include="Images\GreenBlack\bx_loader.gif" />
+    <Content Include="Images\GreenBlack\green_right.png" />
     <Content Include="Images\GreenBlack\products\product1.jpg" />
     <Content Include="Images\GreenBlack\products\product2.jpg" />
     <Content Include="Images\GreenBlack\products\product3.jpg" />
@@ -298,31 +316,63 @@
     <Content Include="Images\GreenBlack\t-left.png" />
     <Content Include="Images\GreenBlack\t-right.png" />
     <Content Include="Images\GreenBlack\templatemo_logo.png" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\Chart.js" />
-    <Content Include="js\jquery-2.1.4.min.js" />
-    <Content Include="js\jquery-ui.js" />
-    <Content Include="js\jquery.basictable.min.js" />
-    <Content Include="js\jquery.jqcandlestick.min.js" />
-    <Content Include="js\jquery.nicescroll.js" />
-    <Content Include="js\lightbox-plus-jquery.min.js" />
-    <Content Include="js\monthly.js" />
-    <Content Include="js\morris.js" />
-    <Content Include="js\raphael-min.js" />
-    <Content Include="js\scripts.js" />
+    <Content Include="Images\icon_bookmark.png" />
+    <Content Include="Images\icon_contact_aim.png" />
+    <Content Include="Images\icon_contact_email.png" />
+    <Content Include="Images\icon_contact_icq.png" />
+    <Content Include="Images\icon_contact_jabber.png" />
+    <Content Include="Images\icon_contact_msnm.png" />
+    <Content Include="Images\icon_contact_pm.png" />
+    <Content Include="Images\icon_contact_www.png" />
+    <Content Include="Images\icon_contact_yahoo.png" />
+    <Content Include="Images\icon_home.png" />
+    <Content Include="Images\icon_pages.png" />
+    <Content Include="Images\icon_post_delete.png" />
+    <Content Include="Images\icon_post_edit.png" />
+    <Content Include="Images\icon_post_info.png" />
+    <Content Include="Images\icon_post_quote.png" />
+    <Content Include="Images\icon_post_report.png" />
+    <Content Include="Images\icon_post_target.png" />
+    <Content Include="Images\icon_print.png" />
+    <Content Include="Images\icon_sendemail.png" />
+    <Content Include="Images\icon_subscribe.png" />
+    <Content Include="Images\icon_topic_latest.png" />
+    <Content Include="Images\icon_unsubscribe.png" />
+    <Content Include="Images\icon_user_online.png" />
+    <Content Include="Images\icon_user_warn.png" />
+    <Content Include="Images\im-icons6870.svg" />
+    <Content Include="Images\login-icons.png" />
+    <Content Include="Images\marina-buy.png" />
+    <Content Include="Images\metro-buy-252px.png" />
+    <Content Include="Images\navbit-arrow-right.png" />
+    <Content Include="Images\notice-exclamation.png" />
+    <Content Include="Images\search-button-bg.png" />
+    <Content Include="Images\site_logo.png" />
+    <Content Include="Images\site_logo.svg" />
+    <Content Include="Images\social-icons.png" />
+    <Content Include="Images\subforum_read.png" />
+    <Content Include="Images\subforum_unread.png" />
+    <Content Include="Images\subheader_bg.png" />
+    <Content Include="Images\submenu-icons.png" />
+    <Content Include="Images\tab-icon-contacts.png" />
+    <Content Include="Images\tab-icon-faq.png" />
+    <Content Include="Images\tab-icon-members.png" />
+    <Content Include="Images\tab-icon-news.png" />
+    <Content Include="Images\tab-icon-sample.png" />
+    <Content Include="Images\toggleMenubg.png" />
+    <Content Include="Images\topic_read.png" />
+    <Content Include="Images\topic_read.svg" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="js\classie.js" />
+    <Content Include="js\forum_fn.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\styleswitcher.js" />
     <Content Include="Scripts\bootstrap-table.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="fonts\linecons.eot" />
-    <Content Include="fonts\linecons.ttf" />
-    <Content Include="fonts\linecons.woff" />
-    <Content Include="fonts\revicons.eot" />
-    <Content Include="fonts\revicons.ttf" />
-    <Content Include="fonts\revicons.woff" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\style.scss" />
+    <Content Include="fonts\fontawesome-webfontba72.woff" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -378,8 +428,14 @@
     <Content Include="Views\Template\Index.cshtml" />
     <Content Include="Views\Shared\GreenBlackLayout.cshtml" />
     <Content Include="Views\GetInfoFacebook\Index.cshtml" />
+    <Content Include="Views\Temp\Index.cshtml" />
+    <Content Include="Views\Shared\WebLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{815f4ddc-558b-4d1a-8208-e4c2aadeee68}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DCContext\DCContext.csproj">
       <Project>{29058a8b-219b-4a25-99ea-d2b79f9029f7}</Project>
       <Name>DCContext</Name>
@@ -402,9 +458,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
@@ -449,7 +502,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3959</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:3960/</IISUrl>
+          <IISUrl>http://localhost:3961/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

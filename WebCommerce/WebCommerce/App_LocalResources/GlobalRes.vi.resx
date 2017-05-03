@@ -125,4 +125,10 @@
     <value>Sai tài khoản hoặc mật khẩu</value>
     <comment>Thông báo khi đăng ký sai thông tin</comment>
   </data>
+  <data name="WebsiteSlogan" xml:space="preserve">
+    <value>Hàng chất lượng cao giá phải chăng</value>
+  </data>
+  <data name="WebsiteTitle" xml:space="preserve">
+    <value>Kinh doanh hàng ngoại</value>
+  </data>
 </root>

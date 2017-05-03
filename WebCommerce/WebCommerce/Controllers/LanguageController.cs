@@ -22,7 +22,7 @@ namespace WebCommerce.Controllers
 
         //
         // GET: /Language/
-        [Authorize(Roles = "Admin")]
+     //   [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             ViewBag.LanguageCodes = _languageService.GetAll().ToList();

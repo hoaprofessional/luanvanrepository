@@ -77,5 +77,23 @@ namespace WebCommerce.App_LocalResources {
                 return ResourceManager.GetString("InvalidLoginInfomation", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to High quality goods at affordable prices.
+        /// </summary>
+        public static string WebsiteSlogan {
+            get {
+                return ResourceManager.GetString("WebsiteSlogan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foreign Commerce.
+        /// </summary>
+        public static string WebsiteTitle {
+            get {
+                return ResourceManager.GetString("WebsiteTitle", resourceCulture);
+            }
+        }
     }
 }

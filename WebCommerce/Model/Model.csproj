@@ -86,8 +86,11 @@
     <Compile Include="ApplicationUserRole.cs" />
     <Compile Include="ApplicationUserStore.cs" />
     <Compile Include="Auditable.cs" />
+    <Compile Include="CategoryRelationship.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Demo.cs" />
     <Compile Include="LanguageCode.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="PhanSo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SinhVien.cs" />

@@ -17,6 +17,9 @@ namespace Repository
         //1_ThemBang: st2. Thêm DbSet<Lớp mới tạo ở bước 1> vào đây
         // Ví dụ ở đây là public DbSet<Demo> Demoes { set; get; }
         public DbSet<Demo> Demoes { set; get; }
+        public DbSet<Category> Categories { set; get; }
+        public DbSet<CategoryRelationship> CategorieRelationships { set; get; }
+        public DbSet<Menu> Menus { set; get; }
         public DbSet<SinhVien> SinhViens { set; get; }
         public DbSet<PhanSo> PhanSos { set; get; }
         public DbSet<LanguageCode> LanguageCodes { set; get; }
@@ -53,6 +56,21 @@ namespace Repository
                                                                .Update(u => u.HasName("UpdatePhanSo", "dbo"))
                                                                .Delete(u => u.HasName("DeletePhanSo", "dbo"))
                 );
+
+            builder.Entity<Menu>().MapToStoredProcedures(s => s.Insert(u => u.HasName("InsertMenu", "dbo"))
+                                                               .Update(u => u.HasName("UpdateMenu", "dbo"))
+                                                               .Delete(u => u.HasName("DeleteMenu", "dbo"))
+                );
+
+            builder.Entity<Category>().MapToStoredProcedures(s => s.Insert(u => u.HasName("InsertCategory", "dbo"))
+                                                               .Update(u => u.HasName("UpdateCategory", "dbo"))
+                                                               .Delete(u => u.HasName("DeleteCategory", "dbo"))
+                );
+
+            builder.Entity<CategoryRelationship>().MapToStoredProcedures(s => s.Insert(u => u.HasName("InsertCategoryRelationship", "dbo"))
+                                                              .Update(u => u.HasName("UpdateCategoryRelationship", "dbo"))
+                                                              .Delete(u => u.HasName("DeleteCategoryRelationship", "dbo"))
+               );
 
         }
 

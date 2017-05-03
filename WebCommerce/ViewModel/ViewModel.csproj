@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseViewModel.cs" />
+    <Compile Include="CategoryViewModel.cs" />
     <Compile Include="Facebook\FacebookDataViewModel.cs" />
     <Compile Include="Facebook\FacebookParameterViewModel.cs" />
+    <Compile Include="MenuViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

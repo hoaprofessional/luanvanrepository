@@ -85,6 +85,38 @@
     <Compile Include="Migrations\201704250652334_ThemSinhVien1.Designer.cs">
       <DependentUpon>201704250652334_ThemSinhVien1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705020702582_ThemMenu.cs" />
+    <Compile Include="Migrations\201705020702582_ThemMenu.Designer.cs">
+      <DependentUpon>201705020702582_ThemMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705020707445_ThemMenu1.cs" />
+    <Compile Include="Migrations\201705020707445_ThemMenu1.Designer.cs">
+      <DependentUpon>201705020707445_ThemMenu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705021047418_ThemCategory.cs" />
+    <Compile Include="Migrations\201705021047418_ThemCategory.Designer.cs">
+      <DependentUpon>201705021047418_ThemCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705021050308_ThemCategory1.cs" />
+    <Compile Include="Migrations\201705021050308_ThemCategory1.Designer.cs">
+      <DependentUpon>201705021050308_ThemCategory1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705021054069_ThemCategory2.cs" />
+    <Compile Include="Migrations\201705021054069_ThemCategory2.Designer.cs">
+      <DependentUpon>201705021054069_ThemCategory2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705021153314_AddCategoryRelationship.cs" />
+    <Compile Include="Migrations\201705021153314_AddCategoryRelationship.Designer.cs">
+      <DependentUpon>201705021153314_AddCategoryRelationship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705021629334_AddCategoryRelationship1.cs" />
+    <Compile Include="Migrations\201705021629334_AddCategoryRelationship1.Designer.cs">
+      <DependentUpon>201705021629334_AddCategoryRelationship1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705021634373_AddCategoryRelationship2.cs" />
+    <Compile Include="Migrations\201705021634373_AddCategoryRelationship2.Designer.cs">
+      <DependentUpon>201705021634373_AddCategoryRelationship2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -119,6 +151,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704250652334_ThemSinhVien1.resx">
       <DependentUpon>201704250652334_ThemSinhVien1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705020702582_ThemMenu.resx">
+      <DependentUpon>201705020702582_ThemMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705020707445_ThemMenu1.resx">
+      <DependentUpon>201705020707445_ThemMenu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705021047418_ThemCategory.resx">
+      <DependentUpon>201705021047418_ThemCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705021050308_ThemCategory1.resx">
+      <DependentUpon>201705021050308_ThemCategory1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705021054069_ThemCategory2.resx">
+      <DependentUpon>201705021054069_ThemCategory2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705021153314_AddCategoryRelationship.resx">
+      <DependentUpon>201705021153314_AddCategoryRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705021629334_AddCategoryRelationship1.resx">
+      <DependentUpon>201705021629334_AddCategoryRelationship1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705021634373_AddCategoryRelationship2.resx">
+      <DependentUpon>201705021634373_AddCategoryRelationship2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

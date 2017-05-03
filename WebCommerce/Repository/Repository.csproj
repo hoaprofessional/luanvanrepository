@@ -83,6 +83,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryRelationshipRepository.cs" />
+    <Compile Include="CategoryRepository.cs" />
+    <Compile Include="MenuRepository.cs" />
     <Compile Include="SinhVienRepository.cs" />
     <Compile Include="PhanSoRepository.cs" />
     <Compile Include="DemoRepository.cs" />
