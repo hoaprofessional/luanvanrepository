@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using WebCommerce.Models;
 using Model;
-using WebCommerce.App_LocalResources;
+using Common.App_LocalResources;
 
 namespace WebCommerce.Controllers
 {

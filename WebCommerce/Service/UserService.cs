@@ -13,6 +13,7 @@ namespace Service
     {
         List<ApplicationUser> GetUsersByRoleName(string roleName);
         List<ApplicationUser> GetUsersByRoleName2(string roleName);
+        ApplicationUser GetUserByFacebookId(string facebookId);
     }
 
     public class UserService : QlService<ApplicationUser>, IUserService
@@ -51,5 +52,11 @@ namespace Service
                     select user).ToList();
         }
 
+
+
+        public ApplicationUser GetUserByFacebookId(string facebookId)
+        {
+            return _repository.GetSingleByCondition(x => x.FacebookId == facebookId);
+        }
     }
 }

@@ -52,13 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201705111125322_dsds.cs" />
-    <Compile Include="Migrations\201705111125322_dsds.Designer.cs">
-      <DependentUpon>201705111125322_dsds.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705111128048_dsds1.cs" />
-    <Compile Include="Migrations\201705111128048_dsds1.Designer.cs">
-      <DependentUpon>201705111128048_dsds1.cs</DependentUpon>
+    <Compile Include="Migrations\201705121149234_dsds.cs" />
+    <Compile Include="Migrations\201705121149234_dsds.Designer.cs">
+      <DependentUpon>201705121149234_dsds.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="WCDbContext.cs" />
@@ -75,11 +71,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705111125322_dsds.resx">
-      <DependentUpon>201705111125322_dsds.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705111128048_dsds1.resx">
-      <DependentUpon>201705111128048_dsds1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705121149234_dsds.resx">
+      <DependentUpon>201705121149234_dsds.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

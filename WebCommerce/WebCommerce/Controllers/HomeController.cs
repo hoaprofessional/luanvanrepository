@@ -7,29 +7,21 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebCommerce.App_LocalResources;
 using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace WebCommerce.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        IUserService _userService;
-
-        public HomeController(IUserService userService)
+        public HomeController(IUserService userService) : base(userService)
         {
-            _userService = userService;
-            UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
         }
-        UserManager<ApplicationUser> UserManager;
-        public async Task<ActionResult> Index()
+        public override async Task<ActionResult> Index()
         {
-            var loginedUser = await UserManager.FindByIdAsync(User.Identity.GetUserId());
-            ViewBag.Title = GlobalRes.HomePageTitle;
-            ViewBag.LoginedUser = loginedUser;
-            return View();
+            ActionResult view = await base.Index();
+            return view;
         }
 
         public ActionResult About()

@@ -22,19 +22,19 @@ namespace WebCommerce.Tests.RepositoryTest
     [TestClass]
     public class DemoRepositoryTest
     {
-        IDemoRepository _demoRepository;
-        IDbFactory _dbFactory;
-        public DemoRepositoryTest()
-        {
-            _dbFactory = new DbFactory();
-            _demoRepository = new DemoRepository(_dbFactory);
-        }
+        //IDemoRepository _demoRepository;
+        //IDbFactory _dbFactory;
+        //public DemoRepositoryTest()
+        //{
+        //    _dbFactory = new DbFactory();
+        //    _demoRepository = new DemoRepository(_dbFactory);
+        //}
 
-        [TestMethod]
-        public void TestGetAll()
-        {
-            Assert.AreEqual(7, _demoRepository.GetAll().Count());
-        }
+        //[TestMethod]
+        //public void TestGetAll()
+        //{
+        //    Assert.AreEqual(7, _demoRepository.GetAll().Count());
+        //}
 
     }
 }

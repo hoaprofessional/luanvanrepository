@@ -121,8 +121,26 @@
     <value>Trang chủ</value>
     <comment>Tiêu đề trang chủ</comment>
   </data>
+  <data name="Id token facebook invalid" xml:space="preserve">
+    <value>Mã truy cập facebook không hợp lệ</value>
+  </data>
   <data name="InvalidLoginInfomation" xml:space="preserve">
     <value>Sai tài khoản hoặc mật khẩu</value>
     <comment>Thông báo khi đăng ký sai thông tin</comment>
+  </data>
+  <data name="LoginSuccess" xml:space="preserve">
+    <value>Đăng nhập thành công</value>
+  </data>
+  <data name="MessageIdFacebookNull" xml:space="preserve">
+    <value>Id facebook không hợp lệ</value>
+  </data>
+  <data name="NoUserExists" xml:space="preserve">
+    <value>Không tồn tại user</value>
+  </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>Đăng nhập thành công</value>
+  </data>
+  <data name="UserAlreadyExists" xml:space="preserve">
+    <value>Đã tồn tại user</value>
   </data>
 </root>

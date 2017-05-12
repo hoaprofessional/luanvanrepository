@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebCommerce.App_LocalResources {
+namespace Common.App_LocalResources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace WebCommerce.App_LocalResources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WebCommerce.App_LocalResources.GlobalRes", typeof(GlobalRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Common.App_LocalResources.GlobalRes", typeof(GlobalRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -75,6 +75,60 @@ namespace WebCommerce.App_LocalResources {
         public static string InvalidLoginInfomation {
             get {
                 return ResourceManager.GetString("InvalidLoginInfomation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login success.
+        /// </summary>
+        public static string LoginSuccess {
+            get {
+                return ResourceManager.GetString("LoginSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id facebook invalid.
+        /// </summary>
+        public static string MessageIdFacebookNull {
+            get {
+                return ResourceManager.GetString("MessageIdFacebookNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id token facebook invalid.
+        /// </summary>
+        public static string MessageIdTokenNull {
+            get {
+                return ResourceManager.GetString("MessageIdTokenNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No user exists.
+        /// </summary>
+        public static string NoUserExists {
+            get {
+                return ResourceManager.GetString("NoUserExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register success.
+        /// </summary>
+        public static string RegisterSuccess {
+            get {
+                return ResourceManager.GetString("RegisterSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User already exitst.
+        /// </summary>
+        public static string UserAlreadyExists {
+            get {
+                return ResourceManager.GetString("UserAlreadyExists", resourceCulture);
             }
         }
     }

@@ -1,7 +1,4 @@
-﻿@{
-    Model.ApplicationUser loginedUser = ViewBag.LoginedUser;
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html dir="ltr" lang="en-gb">
 <head>
     <meta charset="utf-8">
@@ -66,7 +63,10 @@
     </script>
     <!-- older scripts set started here after the headjs - cannot do this with phpbb31 due to ajax stuff -->
     <script src="~/js/head.load.min.js"></script>
-
+    <script>
+        var fbTokenId = "@ViewBag.FacebookTokenId";
+        var redirectUrl = "@ViewBag.RedirectUrl";
+    </script>
 </head>
 <body data-spy="scroll" data-target=".scrollspy" id="phpbb" class="section-index ltr ">
 
@@ -109,115 +109,6 @@
                         </ul>
                     </li>
                 </ul>
-                @if (loginedUser == null)
-                {
-                    <ul class="nav navbar-nav navbar-right navbar-nav-fancy" style="margin-left:10px;">
-                        <li><a id="buttonRegister" class="login-facebook"><p class="login-facebook-text">Đăng nhập bằng facebook</p></a></li>
-                    </ul>
-                }
-                else
-                {
-
-                    @*<div class="user-login hidden-lg hidden-md hidden-sm">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="dropdown dropdown-avatar open">
-                                    <a href="javascript:void(0)" data-toggle="dropdown" class="user-menu" data-original-title="" title="" aria-expanded="true">
-                                        <img src="//secure.gravatar.com/avatar/a3e16d388fb47ce04a7ed7650059b631?s=100&amp;d=identicon" width="100" height="100" alt="User avatar">&nbsp;&nbsp;<span>Welcome,&nbsp;<span class="username">hoaprofessional</span><i class="caret"></i></span>
-                                    </a>
-                                    <ul class="dropdown-menu usermenu">
-                                        <li><a title="" href="./ucp.php?i=prefs" data-original-title=""><i class="fa fa-user"></i>&nbsp;Profile</a></li>
-                                        <li><a title="" href="./ucp.php?i=pm&amp;folder=inbox" data-original-title=""><i class="fa fa-inbox"></i>&nbsp;Messages&nbsp;&nbsp;<span class="badge badge-info">0</span></a></li>
-
-                                        <li><a title="" href="./ucp.php?i=ucp_notifications" data-original-title=""><i class="fa fa-bell"></i>&nbsp;Notifications&nbsp;&nbsp;</a></li>
-                                        <li><a title="" href="./ucp.php?i=profile&amp;mode=reg_details" data-original-title=""><i class="fa fa-cog"></i>&nbsp;Account settings</a></li>
-                                        <li><a href="./ucp.php" data-original-title="" title=""><i class="fa fa-user"></i>&nbsp;Control Panel</a></li>
-                                        <li><a title="" href="./ucp.php?mode=logout&amp;sid=5ff56f9bda2a4fc0645df3166ea36c8c" data-original-title=""><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>*@
-
-
-                    <ul class="nav navbar-nav navbar-right navbar-nav-fancy">
-                        <li><a class="btn-search" href="javascript:void(0)" data-original-title="" title=""><i class="fa fa-lightbulb-o"></i></a></li>
-                        <li class="dropdown dropdown-avatar dropdown-notification">
-                            <a id="notification_list_button" href="javascript:void(0)" data-toggle="dropdown" data-original-title="" title=""><i class="fa fa-bell"></i></a>
-                            <ul class="dropdown-menu user-login-drop arrow-up">
-                                <li><a href="./ucp.php?i=ucp_notifications" class="notification-heading" data-original-title="" title="">Notifications</a></li>
-                                <li>
-                                    <div id="notification_list" class="navbar-wrapper">
-                                        <div class="navbar-notification">
-                                            <div class="row">
-                                                <div class="notification-content">
-                                                    <div id="about" class="nano">
-                                                        <div class="nano-content">
-                                                            <ul class="list-unstyled">
-                                                                <li class="no_notifications">
-                                                                    <div class="noti-bubble alert alert-default">You have no notifications</div><i class="fa fa-check"></i>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navbar-footer">
-                                            <div class="navbar-footer-content">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-xs-6"><a class="btn btn-default btn-sm" href="./ucp.php?i=ucp_notifications&amp;mode=notification_options" data-original-title="" title="">Settings</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown dropdown-avatar">
-                            <a href="javascript:void(0)" data-toggle="dropdown" data-original-title="" title="" aria-expanded="false">
-                                <img src="//secure.gravatar.com/avatar/a3e16d388fb47ce04a7ed7650059b631?s=100&amp;d=identicon" width="100" height="100" alt="User avatar">&nbsp;&nbsp;<span>Welcome,&nbsp;<span class="username">@loginedUser.Name</span><i class="caret"></i></span>
-                            </a>
-
-                            <ul class="dropdown-menu user-login-drop arrow-up">
-                                <li><a href="./ucp.php?i=pm&amp;folder=inbox" data-original-title="" title="">All caught up! Compose new PM?</a></li>
-                                <li>
-                                    <div class="navbar-wrapper">
-                                        <div class="navbar-content navbar-avatar">
-                                            <div class="row">
-                                                <div class="col-md-5 col-xs-5">
-                                                    <img src="//secure.gravatar.com/avatar/a3e16d388fb47ce04a7ed7650059b631?s=100&amp;d=identicon" width="100" height="100" alt="User avatar">
-                                                    <p class="text-center">
-                                                        <a href="./ucp.php?i=profile&amp;mode=avatar" data-original-title="" title="">
-                                                            <small>Change Avatar</small>
-                                                        </a>
-                                                    </p>
-                                                </div>
-                                                <div class="col-md-7 col-xs-7">
-                                                    <span><a href="./memberlist.php?mode=viewprofile&amp;u=826" class="username" data-original-title="" title="">@loginedUser.Name</a></span>
-                                                    <p class="text-muted small">@loginedUser.Email</p>
-                                                    <a class="btn btn-success btn-sm btn-block" href="./ucp.php" data-original-title="" title=""><i class="fa fa-user"></i>&nbsp;Control Panel</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navbar-footer">
-                                            <div class="navbar-footer-content">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-xs-6">
-                                                        <a class="btn btn-default btn-sm" href="./ucp.php?i=profile&amp;mode=reg_details" data-original-title="" title="">Change Password</a>
-                                                    </div>
-                                                    <div class="col-md-6 col-xs-6">
-                                                        <a class="btn btn-default btn-sm pull-right" id="logout" data-original-title="" title="">Logout</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                }
             </nav>
         </div>
     </header>
@@ -235,53 +126,46 @@
     <div class="container" id="container">
         <!-- start content -->
         <div id="content-forum">
-            @RenderBody();
-        </div>
+            <div class="panel-login panel-w-form">
+                <div class="container">
+                    <div class="row">
 
-    </div> <!-- container in header -->
-    @*<div class="panel-login panel-w-form">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="signin-text">
-                            <span>Create account</span>
-                        </div>
-                        <p>In order to login you must be registered. Registering takes only a few moments but gives you increased capabilities. The board administrator may also grant additional permissions to registered users. Before you register please ensure you are familiar with our terms of use and related policies. Please ensure you read any forum rules as you navigate around the board.</p>
-                        <p><a href="./ucp.php?mode=terms">Terms of use</a>&nbsp;&#124;&nbsp;<a href="./ucp.php?mode=privacy">Privacy policy</a></p>
-                        <p><a href="./ucp.php?mode=register" class="btn btn-default btn-reg-login">Register</a></p>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="signin-text">
-                            <span>Sign in onto your account</span>
-                        </div>
-                        <form method="post" action="./ucp.php?mode=login">
-                            <fieldset>
-                                <div class="form-group">
-                                    <label class="sr-only" for="username">Username:</label>
-                                    <div class="form-icon">
-                                        <input type="text" class="form-control input-lg" name="username" id="username" placeholder="Username">
-                                        <span class="fa fa-user login-form-icon"></span>
-                                    </div>
+                        <div class="col-sm-6">
+                            <div class="signin-text">
+                                <span>Sign in onto your account</span>
+                            </div>
+                            <div id="anti-foreign-token">
+                                @Html.AntiForgeryToken()
+                            </div>
+                            <div class="form-group">
+                                @*<label class="sr-only" for="username">Username:</label>*@
+                                <div class="form-icon">
+                                    <input type="text" class="form-control input-lg" name="name" id="txtName" placeholder="Name">
+                                    <span class="fa fa-user login-form-icon"></span>
                                 </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="password">Password:</label>
-                                    <div class="form-icon">
-                                        <input type="password" class="form-control input-lg" name="password" id="password" placeholder="Password" autocomplete="off">
-                                        <span class="fa fa-lock login-form-icon"></span>
-                                    </div>
+                            </div>
+                            <div class="form-group">
+                                @*<label class="sr-only" for="email">Email:</label>*@
+                                <div class="form-icon">
+                                    <input type="text" class="form-control input-lg" name="email" id="txtEmail" placeholder="Email">
+                                    <span class="fa fa-envelope login-form-icon"></span>
                                 </div>
-                                <div class="checkbox pull-right">
-                                    <label for="autologin"><input type="checkbox" name="autologin" id="autologin">Keep me logged in</label>
-                                </div>
-                                <button type="submit" class="btn btn-primary" name="login" value="Login" data-loading-text="Logging-in...<i class='fa-spin fa fa-spinner fa-lg'></i>">Log me in</button>
-                                <input type="hidden" name="redirect" value="./index.php?" />
+                            </div>
 
-                            </fieldset>
-                        </form>
+                            <div class="checkbox pull-right">
+                                <label for="autologin"><input type="checkbox" name="autologin" id="autologin">Keep me logged in</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="buttonRegister" name="login" value="Login" data-loading-text="Logging-in...<i class='fa-spin fa fa-spinner fa-lg'></i>">Register</button>
+                            <input type="hidden" name="redirect" value="./index.php?" />
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>*@
+        </div>
+
+    </div> <!-- container in header -->
+
 
     <section class="section-pre-footer">
         <div class="container center">
@@ -415,8 +299,7 @@
     <script type="text/javascript" src="~/js/resizer.js?assets_version=55"></script>
     <script type="text/javascript" src="~/js/lightbox.min.js?assets_version=55"></script>
     <script src="~/js/jquery-1.10.2.min.js"></script>
-    <script src="~/js/layout/web_layout.js"></script>
-
+    <script src="~/js/authorize/facebook.js"></script>
     <script>
         $('#content-forum').css('margin-top', ($($('#top')).outerHeight() + 20) + 'px');
     </script>

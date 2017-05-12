@@ -4038,7 +4038,7 @@ td strong.pagination > span .page-dots:first-child {
     padding: 0;
     width: 20px;
     height: 20px;
-	background: url("{T_THEME_PATH}/images/aero.png") no-repeat;
+	background: url("/images/aero.png") no-repeat;
     border: none;
     cursor: pointer;
 }

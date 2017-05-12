@@ -39,9 +39,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_LocalResources\GlobalRes1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalRes.resx</DependentUpon>
+    </Compile>
     <Compile Include="JsonReturn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyCopy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_LocalResources\GlobalRes.jp.resx" />
+    <EmbeddedResource Include="App_LocalResources\GlobalRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobalRes1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_LocalResources\GlobalRes.vi.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

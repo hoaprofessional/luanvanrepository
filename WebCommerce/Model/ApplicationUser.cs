@@ -22,5 +22,7 @@ namespace Model
         public string UpdatedBy { set; get; }
         [DefaultValue(true)]
         public bool Status { set; get; }
+        public String FacebookId { get; set; }
+        public String Name { get; set; }
     }
 }
