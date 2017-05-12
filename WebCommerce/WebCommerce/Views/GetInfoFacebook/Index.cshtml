@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "Get Info Facebook";
+}
+
+<h2>Get info facebook</h2>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<link href="~/Content/GreenBlack/main.css" rel="stylesheet" />
+<link href="~/Content/GreenBlack/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="form-horizontal col-md-12">
+    <div class="form-horizontal col-md-10">
+        <div class="row form-group">
+            <label class="col-md-2 control-label" for="inputToken">Token </label>
+            <div class="col-md-3">
+                <input id="inputGetInfoFacebook" class="form-control" data-val="true" data-val-required="This input is required." name="inputToken" type="text" value="">
+
+            </div>
+
+            <div class="col-md-2">
+                <input type="button" id="buttonGetInfo" class="btn btn-default form-control wrapcontent" value="Get info">
+            </div>
+
+            <div class="col-md-2">
+                <input type="button" id="buttonLoginFacebook" class="btn btn-default form-control wrapcontent" value="Login with facebook">
+            </div>
+
+        </div>
+
+
+        <div class="row form-group border">
+
+            <div class="row form-group">
+                <label class="control-label">INFO FACEBOOK ACCOUNT </label>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-md-2 control-label">Id facebook: </label>
+                <div class="col-md-3">
+                    <label class="control-label" id="labelIdFacebook">... </label>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-md-2 control-label">Name: </label>
+                <div class="col-md-3">
+                    <label class="control-label" id="labelNameFacebook">... </label>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-md-2 control-label">Birthday: </label>
+                <div class="col-md-3">
+                    <label class="control-label" id="labelBirthdayFacebook">... </label>
+                </div>
+            </div>
+
+            <div class="row form-group border" id="post_space">
+                <label class="col-md-2 control-label">Post: </label>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+<script>
+
+    $('#buttonGetInfo').click(function () {
+
+        var data = {};
+        data.accessToken = $('#inputGetInfoFacebook').val();
+
+
+        https://graph.facebook.com/me/posts?access_token=EAACEdEose0cBAHDCT9GkiIuBAjxYBZALdS18JZBZB1ZCuZAvDb1Q3kmXGcByqOFhC8wXyeZBeE2DtaYnR755oNXM524AgnQAcnCRU4wcug9I4Nc6gG8bQZBSePrHtgUZBMw7W46yF8Kdr3FbEWihv94dfhZAFB0kPDPkEXLsbbWl4IH8UkcNeV2m4NiMfWJKHA04ZD
+
+        $.ajax({
+            type: "POST",
+            url: "/GetInfoFacebook/OnClickGetInfo",
+            data: JSON.stringify(data),
+            success: function (result) {
+                $('#labelIdFacebook').text(result.id);
+                $('#labelNameFacebook').text(result.name);
+                $('#labelBirthdayFacebook').text(result.birthday);
+
+                $.each(result.posts[0].Value, function (index, val) {
+                    $('#post_space').append(['<div class="row form-group">', val[2].Value, '</div>'].join(''))
+                });
+
+            },
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+
+    });
+
+
+
+    var logInWithFacebook = function () {
+        FB.login(function (response) {
+            if (response.authResponse) {
+                alert('You are logged in &amp; cookie set!');
+                // Now you can redirect the user or do an AJAX request to
+                // a PHP script that grabs the signed request from the cookie.
+            } else {
+                alert('User cancelled login or did not fully authorize.');
+            }
+        });
+        return false;
+    };
+    window.fbAsyncInit = function () {
+        FB.init({ appId: '1320055144782143', xfbml: true, cookie: true, oauth: true, version: 'v2.8' });
+    };
+
+    $(window).load(function () {
+        var comment_callback = function (response) {
+            console.log("comment_callback");
+            console.log(response);
+        }
+        FB.Event.subscribe('comment.create', comment_callback);
+        FB.Event.subscribe('comment.remove', comment_callback);
+    });
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    $('#buttonLoginFacebook').click(logInWithFacebook);
+
+</script>

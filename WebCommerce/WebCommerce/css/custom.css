@@ -1,0 +1,37 @@
+/*****************************************************************
+ * Custom CSS Stylesheet. You can add any custom CSS selectors here after the comment line. 
+ * They will be given the highest priority on any elements on the forum
+ * Personilize your forum color scheme in one click here: www.sitesplat.com/phpBB3/ 
+ * **************************************************************
+ *
+ * FLATBOOTS @SiteSplat.com - Custom CSS STYLESHEET - 
+ * 
+ * **************************************************************
+ *****************************************************************/
+ /* ===[ CSS HOOK TOP ]=== */
+ /** Youtube BBcode for FLATBOOTS **/
+
+.flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.flex-video {
+    height: 0;
+    margin-bottom: 16px;
+    overflow: hidden;
+    padding-bottom: 67.5%;
+    padding-top: 25px;
+    position: relative;
+}
+
+.control-video {
+    max-width: 400px;
+}
+
+/** Youtube BBcode for FLATBOOTS **/
+ 
+ /* ===[ CSS HOOK BOOTTOM ]=== */

@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCommerce", "WebCommerce\WebCommerce.csproj", "{2A1B27F3-BAB3-451A-BF55-6CD8F1495BBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCommerce.Tests", "WebCommerce.Tests\WebCommerce.Tests.csproj", "{D0A55F48-10A5-45A0-9D2A-D199953E49A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F8B8E34C-07D2-4828-B4BC-A5353EF8396A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{6E44CCF4-08D0-4F8E-8987-CC6FE381B282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{6E41A7BF-AA5B-4536-A3F2-8831A4FE1CCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{76C2B9D8-1CD9-4046-811D-666AA18BCDEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{815F4DDC-558B-4D1A-8208-E4C2AADEEE68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCommerceDbContext", "WebCommerceDbContext\WebCommerceDbContext.csproj", "{3DB4EA17-94CE-4EB7-8068-F75052BE13B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A1B27F3-BAB3-451A-BF55-6CD8F1495BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1B27F3-BAB3-451A-BF55-6CD8F1495BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1B27F3-BAB3-451A-BF55-6CD8F1495BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1B27F3-BAB3-451A-BF55-6CD8F1495BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A55F48-10A5-45A0-9D2A-D199953E49A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A55F48-10A5-45A0-9D2A-D199953E49A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A55F48-10A5-45A0-9D2A-D199953E49A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A55F48-10A5-45A0-9D2A-D199953E49A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B8E34C-07D2-4828-B4BC-A5353EF8396A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B8E34C-07D2-4828-B4BC-A5353EF8396A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B8E34C-07D2-4828-B4BC-A5353EF8396A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B8E34C-07D2-4828-B4BC-A5353EF8396A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E44CCF4-08D0-4F8E-8987-CC6FE381B282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E44CCF4-08D0-4F8E-8987-CC6FE381B282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E44CCF4-08D0-4F8E-8987-CC6FE381B282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E44CCF4-08D0-4F8E-8987-CC6FE381B282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E41A7BF-AA5B-4536-A3F2-8831A4FE1CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E41A7BF-AA5B-4536-A3F2-8831A4FE1CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E41A7BF-AA5B-4536-A3F2-8831A4FE1CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E41A7BF-AA5B-4536-A3F2-8831A4FE1CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C2B9D8-1CD9-4046-811D-666AA18BCDEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C2B9D8-1CD9-4046-811D-666AA18BCDEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C2B9D8-1CD9-4046-811D-666AA18BCDEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C2B9D8-1CD9-4046-811D-666AA18BCDEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{815F4DDC-558B-4D1A-8208-E4C2AADEEE68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815F4DDC-558B-4D1A-8208-E4C2AADEEE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815F4DDC-558B-4D1A-8208-E4C2AADEEE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815F4DDC-558B-4D1A-8208-E4C2AADEEE68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB4EA17-94CE-4EB7-8068-F75052BE13B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB4EA17-94CE-4EB7-8068-F75052BE13B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB4EA17-94CE-4EB7-8068-F75052BE13B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB4EA17-94CE-4EB7-8068-F75052BE13B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,548 @@
+﻿@{
+    Model.ApplicationUser loginedUser = ViewBag.LoginedUser;
+}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="designer" content="SiteSplat http://themeforest.net/user/themesplat/portfolio?ref=ThemeSplat">
+    <meta content="FLATBOOTS" property="og:site_name">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <title>FLATBOOTS&nbsp;&#45;&nbsp;Index page</title>
+    <link rel="alternate" type="application/atom+xml" title="Feed - FLATBOOTS" href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/feed.php">
+    <link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/feed.php?mode=topics">
+
+    <!-- Google free font here -->
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Asap:700' rel='stylesheet' type='text/css'>
+
+    <!-- CSS files start here -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/style.min.css" rel="stylesheet" />
+    <link href="~/css/basics.css" rel="stylesheet" />
+    <link href="~/css/custom.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="~/css/nemoji.css?assets_version=55" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/css/likedd.css?assets_version=55" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/css/lightbox.min.css?assets_version=55" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/css/main.css" rel="stylesheet" />
+
+    <link href="~/css/basics.min.css" rel="stylesheet">
+    <!-- Remove the conditional below to use the custom CSS without FLATBOOTS Mini CMS Extension -->
+    <!-- CSS files stop here -->
+
+    <style>
+        .spinner {
+            position: absolute;
+            left: 45.625%;
+            top: 42.22%;
+            left: calc(50% - 28px);
+            top: calc(50% - 28px);
+            height: 40px;
+            width: 40px;
+            animation: spinner .8s infinite linear;
+            border: 8px solid #ccc;
+            border-top-color: transparent;
+            border-radius: 50%;
+        }
+
+        keyframes spinner {
+            0%;
+
+        {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+        }
+    </style>
+    <script>
+        var boardurl = '/';
+    </script>
+    <!-- older scripts set started here after the headjs - cannot do this with phpbb31 due to ajax stuff -->
+    <script src="~/js/head.load.min.js"></script>
+
+</head>
+<body data-spy="scroll" data-target=".scrollspy" id="phpbb" class="section-index ltr ">
+
+    <header id="top" class="navbar navbar-inverse navbar-static-top flat-nav fixedHeader">
+        <div class="container">
+            <div class="navbar-header">
+                <button data-target=".flat-nav-collapse" data-toggle="collapse" type="button" class="nav-tog lines-button x navbar-toggle neutro">
+                    <span class="sr-only sr-nav">Toggle Navigation</span>
+                    <span class="lines"></span>
+                </button>
+                <a class="navbar-brand" href="./index.php">FLATBOOTS</a>
+            </div>
+            <!-- Main navigation block -->
+            <nav class="collapse navbar-collapse flat-nav-collapse" aria-label="Primary">
+
+                <ul class="nav navbar-nav navbar-nav-fancy">
+                    <li class=""><a href="./index.php">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Forum&nbsp;<b class="caret"></b></a>
+                        <span class="dropdown-arrow"></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-search"></i>Unanswered topics</a></li>
+                            <li><a href="#"><i class="fa fa-star"></i>Active topics</a></li>
+                            <li><a href="#"><i class="fa fa-question-circle"></i>FAQ</a></li>
+                            <li><a href="#"><i class="fa fa-trophy"></i>Top 10 Like / Dislike list</a></li>
+                            <li><a href="#"><i class="fa fa-group"></i>Members</a></li>
+                            <li><a href="#"><i class="fa fa-trophy"></i>The team</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Search&nbsp;<b class="caret"></b></a>
+                        <span class="dropdown-arrow"></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="./search.php"><i class="fa fa-search fa"></i>Advanced search</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Header intro example</li>
+                            <li><a href="#">Demo link no icons</a></li>
+                            <li><a href="#">Demo link no icons</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                @if (loginedUser == null)
+                {
+                    <ul class="nav navbar-nav navbar-right navbar-nav-fancy" style="margin-left:10px;">
+                        <li><a href="#" class="login-facebook"><p class="login-facebook-text">Đăng nhập bằng facebook</p></a></li>
+                    </ul>
+                }
+                else
+                {
+                    
+                    @*<div class="user-login hidden-lg hidden-md hidden-sm">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown dropdown-avatar open">
+                                <a href="javascript:void(0)" data-toggle="dropdown" class="user-menu" data-original-title="" title="" aria-expanded="true">
+                                    <img src="//secure.gravatar.com/avatar/a3e16d388fb47ce04a7ed7650059b631?s=100&amp;d=identicon" width="100" height="100" alt="User avatar">&nbsp;&nbsp;<span>Welcome,&nbsp;<span class="username">hoaprofessional</span><i class="caret"></i></span>
+                                </a>
+                                <ul class="dropdown-menu usermenu">
+                                    <li><a title="" href="./ucp.php?i=prefs" data-original-title=""><i class="fa fa-user"></i>&nbsp;Profile</a></li>
+                                    <li><a title="" href="./ucp.php?i=pm&amp;folder=inbox" data-original-title=""><i class="fa fa-inbox"></i>&nbsp;Messages&nbsp;&nbsp;<span class="badge badge-info">0</span></a></li>
+
+                                    <li><a title="" href="./ucp.php?i=ucp_notifications" data-original-title=""><i class="fa fa-bell"></i>&nbsp;Notifications&nbsp;&nbsp;</a></li>
+                                    <li><a title="" href="./ucp.php?i=profile&amp;mode=reg_details" data-original-title=""><i class="fa fa-cog"></i>&nbsp;Account settings</a></li>
+                                    <li><a href="./ucp.php" data-original-title="" title=""><i class="fa fa-user"></i>&nbsp;Control Panel</a></li>
+                                    <li><a title="" href="./ucp.php?mode=logout&amp;sid=5ff56f9bda2a4fc0645df3166ea36c8c" data-original-title=""><i class="fa fa-power-off"></i>&nbsp;Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>*@
+
+
+                    <ul class="nav navbar-nav navbar-right navbar-nav-fancy">
+                        <li><a class="btn-search" href="javascript:void(0)" data-original-title="" title=""><i class="fa fa-lightbulb-o"></i></a></li>
+                        <li class="dropdown dropdown-avatar dropdown-notification">
+                            <a id="notification_list_button" href="javascript:void(0)" data-toggle="dropdown" data-original-title="" title=""><i class="fa fa-bell"></i></a>
+                            <ul class="dropdown-menu user-login-drop arrow-up">
+                                <li><a href="./ucp.php?i=ucp_notifications" class="notification-heading" data-original-title="" title="">Notifications</a></li>
+                                <li>
+                                    <div id="notification_list" class="navbar-wrapper">
+                                        <div class="navbar-notification">
+                                            <div class="row">
+                                                <div class="notification-content">
+                                                    <div id="about" class="nano">
+                                                        <div class="nano-content">
+                                                            <ul class="list-unstyled">
+                                                                <li class="no_notifications">
+                                                                    <div class="noti-bubble alert alert-default">You have no notifications</div><i class="fa fa-check"></i>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="navbar-footer">
+                                            <div class="navbar-footer-content">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xs-6"><a class="btn btn-default btn-sm" href="./ucp.php?i=ucp_notifications&amp;mode=notification_options" data-original-title="" title="">Settings</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-avatar">
+                            <a href="javascript:void(0)" data-toggle="dropdown" data-original-title="" title="" aria-expanded="false">
+                                <img src="//secure.gravatar.com/avatar/a3e16d388fb47ce04a7ed7650059b631?s=100&amp;d=identicon" width="100" height="100" alt="User avatar">&nbsp;&nbsp;<span>Welcome,&nbsp;<span class="username">@loginedUser.UserName</span><i class="caret"></i></span>
+                            </a>
+
+                            <ul class="dropdown-menu user-login-drop arrow-up">
+                                <li><a href="./ucp.php?i=pm&amp;folder=inbox" data-original-title="" title="">All caught up! Compose new PM?</a></li>
+                                <li>
+                                    <div class="navbar-wrapper">
+                                        <div class="navbar-content navbar-avatar">
+                                            <div class="row">
+                                                <div class="col-md-5 col-xs-5">
+                                                    <img src="//secure.gravatar.com/avatar/a3e16d388fb47ce04a7ed7650059b631?s=100&amp;d=identicon" width="100" height="100" alt="User avatar">                                            <p class="text-center">
+                                                        <a href="./ucp.php?i=profile&amp;mode=avatar" data-original-title="" title="">
+                                                            <small>Change Avatar</small>
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span><a href="./memberlist.php?mode=viewprofile&amp;u=826" class="username" data-original-title="" title="">hoaprofessional</a></span>
+                                                    <p class="text-muted small">binhung995@gmail.com</p>
+                                                    <a class="btn btn-success btn-sm btn-block" href="./ucp.php" data-original-title="" title=""><i class="fa fa-user"></i>&nbsp;Control Panel</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="navbar-footer">
+                                            <div class="navbar-footer-content">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xs-6">
+                                                        <a class="btn btn-default btn-sm" href="./ucp.php?i=profile&amp;mode=reg_details" data-original-title="" title="">Change Password</a>
+                                                    </div>
+                                                    <div class="col-md-6 col-xs-6">
+                                                        <a class="btn btn-default btn-sm pull-right" href="./ucp.php?mode=logout&amp;sid=df0de82d086420df792f0a7e57f3bcda" data-original-title="" title="">Logout</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                }
+            </nav>
+        </div>
+    </header>
+
+    <div class="search-input search-input-fullscreen hidden-xs hidden-sm">
+        <form method="get" id="search" action="./search.php">
+            <fieldset>
+                <input name="keywords" id="keywords" type="text" maxlength="128" title="Search for keywords" placeholder="Search" value="" autocomplete="off" />
+                <div class="close">&times;</div>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="container" id="container">
+        <!-- start content -->
+        <div id="content-forum">
+            @RenderBody();
+        </div>
+
+    </div> <!-- container in header -->
+    <div class="panel-login panel-w-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="signin-text">
+                        <span>Create account</span>
+                    </div>
+                    <p>In order to login you must be registered. Registering takes only a few moments but gives you increased capabilities. The board administrator may also grant additional permissions to registered users. Before you register please ensure you are familiar with our terms of use and related policies. Please ensure you read any forum rules as you navigate around the board.</p>
+                    <p><a href="./ucp.php?mode=terms">Terms of use</a>&nbsp;&#124;&nbsp;<a href="./ucp.php?mode=privacy">Privacy policy</a></p>
+                    <p><a href="./ucp.php?mode=register" class="btn btn-default btn-reg-login">Register</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="signin-text">
+                        <span>Sign in onto your account</span>
+                    </div>
+                    <form method="post" action="./ucp.php?mode=login">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="sr-only" for="username">Username:</label>
+                                <div class="form-icon">
+                                    <input type="text" class="form-control input-lg" name="username" id="username" placeholder="Username">
+                                    <span class="fa fa-user login-form-icon"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="password">Password:</label>
+                                <div class="form-icon">
+                                    <input type="password" class="form-control input-lg" name="password" id="password" placeholder="Password" autocomplete="off">
+                                    <span class="fa fa-lock login-form-icon"></span>
+                                </div>
+                            </div>
+                            <div class="checkbox pull-right">
+                                <label for="autologin"><input type="checkbox" name="autologin" id="autologin">Keep me logged in</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary" name="login" value="Login" data-loading-text="Logging-in...<i class='fa-spin fa fa-spinner fa-lg'></i>">Log me in</button>
+                            <input type="hidden" name="redirect" value="./index.php?" />
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section-page">
+        <div id="rtblock" class="container">
+            <div class="row text-center" id="fltl">
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-post">
+                        <div class="blog-meta">
+                            <time datetime="2017-04-29" class="entry-date">
+                                <span class="day">29</span>
+                                <span class="month">Apr</span>
+                            </time>
+                        </div>
+                        <div class="title">
+                            <header class="entry-header">
+                                <h6 class="inverse-font"><a title="" href="./viewtopic.php?f=17&amp;t=12">Normal Announcement example - note the font icon status</a></h6>
+                                <div class="entry-meta">
+                                    <span class="jp-views"><img src="//secure.gravatar.com/avatar/c11c45a882130d6f0ea476145a7e2d9a?s=100&amp;d=identicon" width="100" height="100" alt="User avatar" />&nbsp;&#45;&nbsp;By&nbsp;Ralph</span>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="content-post">
+                            <p>wow</p>
+                        </div>
+                        <div class="panel-bottom">
+                            <a title="" class="btn btn-xs btn-block" href="./viewtopic.php?p=421#p421">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-post">
+                        <div class="blog-meta">
+                            <time datetime="2017-04-29" class="entry-date">
+                                <span class="day">29</span>
+                                <span class="month">Apr</span>
+                            </time>
+                        </div>
+                        <div class="title">
+                            <header class="entry-header">
+                                <h6 class="inverse-font"><a title="" href="./viewtopic.php?f=17&amp;t=85">BBemoji - Custom extension to support emoji with autoselect for phpBB 3.1</a></h6>
+                                <div class="entry-meta">
+                                    <span class="jp-views"><img src="//secure.gravatar.com/avatar/c11c45a882130d6f0ea476145a7e2d9a?s=100&amp;d=identicon" width="100" height="100" alt="User avatar" />&nbsp;&#45;&nbsp;By&nbsp;Ralph</span>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="content-post">
+                            <p> Check this out start typing an emojy for example &#91;&hellip;&#93;</p>
+                        </div>
+                        <div class="panel-bottom">
+                            <a title="" class="btn btn-xs btn-block" href="./viewtopic.php?p=419#p419">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-post">
+                        <div class="blog-meta">
+                            <time datetime="2017-04-28" class="entry-date">
+                                <span class="day">28</span>
+                                <span class="month">Apr</span>
+                            </time>
+                        </div>
+                        <div class="title">
+                            <header class="entry-header">
+                                <h6 class="inverse-font"><a title="" href="./viewtopic.php?f=17&amp;t=111">This is my first post</a></h6>
+                                <div class="entry-meta">
+                                    <span class="jp-views"><img src="//secure.gravatar.com/avatar/d9089aba7a32dc6d225257f88328ed4b?s=100&amp;d=identicon" width="100" height="100" alt="User avatar" />&nbsp;&#45;&nbsp;By&nbsp;XwXCatwomanXwX</span>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="content-post">
+                            <p>This exciting, I really like this interface.</p>
+                        </div>
+                        <div class="panel-bottom">
+                            <a title="" class="btn btn-xs btn-block" href="./viewtopic.php?p=418#p418">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-post">
+                        <div class="blog-meta">
+                            <time datetime="2017-04-10" class="entry-date">
+                                <span class="day">10</span>
+                                <span class="month">Apr</span>
+                            </time>
+                        </div>
+                        <div class="title">
+                            <header class="entry-header">
+                                <h6 class="inverse-font"><a title="" href="./viewtopic.php?f=17&amp;t=110">Bu bir test başlığıdır</a></h6>
+                                <div class="entry-meta">
+                                    <span class="jp-views"><img src="//secure.gravatar.com/avatar/1d510a88d04eb825e2741c5642ec31e9?s=100&amp;d=identicon" width="100" height="100" alt="User avatar" />&nbsp;&#45;&nbsp;By&nbsp;brandt</span>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="content-post">
+                            <p>
+                                http://i.hizliresim.com/9QYjNZ.png
+
+                                Bu bir testt&#91;&hellip;&#93;
+                            </p>
+                        </div>
+                        <div class="panel-bottom">
+                            <a title="" class="btn btn-xs btn-block" href="./viewtopic.php?p=414#p414">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="rtbtnrow" class="row text-center">
+                <div class="col-md-12">
+                    <a class="rtbutton btn btn-default btn-block btn-lazy" href="javascript:void(0)">VIEW MORE TOPICS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="mastbottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <p class="call-to-action">Swap-in out addons, use only what you really need!</p>
+                </div>
+                <div class="col-md-3">
+                    <a href="http://goo.gl/LvmwlF" class="btn btn-xl btn-danger pull-right" title="">Purchase now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section-pre-footer">
+        <div class="container center">
+            <div class="row">
+                <div class="col-sm-5 twitter">
+                    <div class="thumb"><i class="fa fa-paw"></i></div>
+                    <div class="text">
+                        <h3>Built to last</h3>
+                        <p>Why Would you Settle for Less when you can have More? Do not let other Authors Fool you with Empty Marketing Keywords. FLATBOOTS is what you Deserve. Built to last, Built from Scratch, Nothing Less.</p>
+                        <a href="#"><strong>Read more</strong></a>
+                    </div>
+
+                </div>
+                <div class="col-sm-5 col-sm-offset-2 twitter">
+                    <div class="thumb"><i class="fa fa-twitter"></i></div>
+                    <div class="text">
+                        <h3><a href="https://twitter.com/SiteSplat">Join us on Twitter&nbsp;<small>@@SiteSplat</small></a></h3>
+                        <div id="twitter-feed"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-bg"></div>
+    </section>
+    <footer class="burned-asphalt">
+        <!-- Footer block -->
+        <div class="midnight-" id="sub-footer">
+            <div class="container">
+
+                <div class="row bottomLinks">
+                    <div class="col-sm-6 sm-direction">
+                        <nav>
+                            <ul class="list-inline footer-nav">
+                                <li><a href="http://goo.gl/LvmwlF" title="">Advertise</a></li>
+                                <li><a href="./ucp.php?mode=privacy" title="">Privacy policy</a></li>
+                                <li><a href="" title="">DMCA</a></li>
+                                <li><a href="./ucp.php?mode=terms" title="">Terms</a></li>
+                            </ul>
+
+                        </nav>
+                    </div>
+                    <div class="col-sm-6 sm-direction">
+                        <div class="clearfix socialbar">
+                            <div class="social-network">
+                                <a class="google-plus-color" title="Google+" href="https://plus.google.com/u/0/100435978342273345264/"><i class="fa fa-google-plus"></i></a>
+                                <a class="github-color" title="Github" href="#2"><i class="fa fa-github"></i></a>
+                                <a class="behance-color" title="Behance" href="#3"><i class="fa fa-behance"></i></a>
+                                <!-- <a class="dropbox-color" title="Dropbox" href="#4"><i class="fa fa-dropbox"></i></a> -->
+                                <!-- <a class="pinterest-color" title="Pinterest" href="#5"><i class="fa fa-pinterest"></i></a> -->
+                                <a class="facebook-color" title="Facebook" href="#6"><i class="fa fa-facebook"></i></a>
+                                <a class="twitter-color" title="Twitter" href="https://twitter.com/SiteSplat"><i class="fa fa-twitter"></i></a>
+                                <!-- <a class="bitbucket-color" title="Bitbucket" href="#8"><i class="fa fa-bitbucket"></i></a> -->
+                                <a class="envato-color" title="Envato" href="http://themeforest.net/user/ThemeSplat/portfolio?ref=ThemeSplat"><i class="icon-moon-envatoleaf"></i></a>
+                                <a class="rss-color hidden-xs" title="rss" href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/feed.php"><i class="fa fa-rss"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 sm-direction">
+                        <p class="copyrights">
+                            <small>HandCrafted With</small>&nbsp;<i class="fa fa-heart text-flatboots-red"></i>&nbsp;<small>And</small>&nbsp;<i class="fa fa-coffee"></i>&nbsp;<small>By<a href="http://www.sitesplat.com/" title="SiteSplat" target="_blank">&nbsp;SiteSplat</a>&nbsp;&#45;&nbsp;Powered By&nbsp;<a href="http://www.phpbb.com/" title="Forum Software &copy; phpBB&reg; Group" target="_blank">phpBB</a></small>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6 sm-direction">
+                        <p class="debug-output">
+                            <small>&#45;&nbsp;All times are <abbr title="UTC-5">UTC-05:00</abbr>&nbsp;&#45;</small>
+                            <!-- FLATBOOTS_VERSION -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a id="totop" class="top-flat" href="" onclick="return false;" style="display:none;"></a>
+    <div class="hidden"></div>
+    <!-- injected via core and ajax JS for the return confirmation actions -->
+    <div id="page-footer">
+        <div id="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+            <div id="darken">&nbsp;</div>
+        </div>
+
+        <div id="phpbb_alert" class="alert alert-default phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+            <button type="button" class="close alert_close" data-dismiss="alert"><span class="awe-remove-circle"></span></button>
+            <h3 class="alert_title">&nbsp;</h3>
+            <p class="alert_text"></p>
+        </div>
+
+        <div id="phpbb_confirm" class="alert alert-default phpbb_alert">
+            <button type="button" class="close alert_close" data-dismiss="alert"><span class="awe-remove-circle"></span></button>
+            <div class="alert_text"></div>
+        </div>
+    </div>
+    <!-- injected via core and ajax JS for the return confirmation actions -->
+    <script>
+        // this loads jquery asyncrounously & in parallel
+        head.load("/js/jquery-1.10.2.min.js", "/js/bootstrap.min.js", "/js/core.min.js", "/js/forum_fn.min.js", "/js/ajax.min.js");
+    </script>
+
+    <!-- we use this event to load the JS scripts properly via the extension system -->
+    <script>
+        var start = 4;
+    </script>
+    <script>
+        var vseLightbox = {};
+        vseLightbox.resizeWidth = 600;
+        vseLightbox.lightboxGal = 1;
+        vseLightbox.lightboxSig = 0;
+        vseLightbox.imageTitles = 0;
+    </script>
+
+    <!-- injected via a module or an include -->
+    <script>
+        // some function that depends on bootstrap and jquery
+        head.ready(function () {
+            $('.footable').footable(); $(".selectpicker").selectpicker(); $(".selectpicker").tooltip("disable"); var totop = $("#totop"); totop.click(function () { $("html, body").stop(true, true).animate({ scrollTop: 0 }, 500); return false }); $(window).scroll(function () { if ($(this).scrollTop() > 600) { totop.fadeIn() } else { totop.fadeOut() } }); $("button[data-loading-text], input[data-loading-text], .btn-load").click(function () { var e = $(this); e.button("loading"); setTimeout(function () { e.button("reset") }, 3e3) });
+            $("input").iCheck({ checkboxClass: "icheckbox_flat-aero", radioClass: "iradio_flat-aero" }); $(".btn-search").click(function () { $(".search-input").toggleClass("open").find("input").focus() }); $(".close").click(function () { $(this).prev("input").val("").parents(".search-input").removeClass("open") }); $(".nav-tog").click(function () { if ($(this).hasClass("neutro")) { $(this).removeClass("neutro").addClass("open") } else { $(this).removeClass("open").addClass("neutro") } });
+            $('input[data-reset-on-edit]').on('keyup', function () { $(this.getAttribute('data-reset-on-edit')).val(''); });
+            $('a').tooltip({ trigger: 'hover', container: 'body' })
+            $('#notification_list_button').click(function () { setTimeout(function () { $(".nano").nanoScroller(); }, 0); });
+        });
+        // some function that depends on bootstrap and jquery
+        head.load("/js/twitterFetcher.min.js");
+        head.ready('/js/twitterFetcher.min.js', function (twit) { var twit = { "id": '391407906655965184', "domId": 'twitter-feed', "maxTweets": 1, "showUser": false, "showImages": true, "enableLinks": true }; twitterFetcher.fetch(twit); });
+    </script>
+    <!-- injected via a module or an include -->
+
+    <script type="text/javascript" src="~/js/fltl.js?assets_version=55"></script>
+    <script type="text/javascript" src="~/js/resizer.js?assets_version=55"></script>
+    <script type="text/javascript" src="~/js/lightbox.min.js?assets_version=55"></script>
+    <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script>
+        $('#content-forum').css('margin-top', ($($('#top')).outerHeight() + parseInt($('.breadcrumb-line').css('margin-top').substring(0, $('.breadcrumb-line').css('margin-top').length - 2))) + 'px');
+    </script>
+
+</body>
+</html>

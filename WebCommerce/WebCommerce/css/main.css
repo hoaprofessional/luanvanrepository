@@ -1,0 +1,151 @@
+﻿/*
+    create by Hung-DV
+    12/5/2017
+*/
+.fixedHeader {
+    min-height: 60px !important;
+    padding-top: 0.5% !important;
+    position: fixed;
+    width: 100%;
+}
+/*
+    create by Hung-DV
+    12/5/2017
+*/
+a.login-facebook {
+    background: url(/images/facebook-icon.png);
+    width: 188px;
+    background-size: contain;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    height: 40px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    /*margin-left: 2.5%;*/
+}
+
+    a.login-facebook:hover {
+        background: url(/images/facebook-icon-hover.png);
+        width: 188px;
+        background-size: contain;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;
+        height: 40px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+        /*margin-left: 2.5%;*/
+    }
+
+    a.login-facebook:active {
+        background: url(/images/facebook-icon-click.png);
+        width: 188px;
+        background-size: contain;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;
+        height: 40px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+        /*margin-left: 2.5%;*/
+    }
+
+
+/*
+    create by Hung-DV
+    12/5/2017
+*/
+
+@media (min-width: 770px) {
+    p.login-facebook-text {
+        text-align: center;
+        margin-top: -3.5%;
+        font-weight: 700;
+        font-size: 12px;
+        margin-left: 16px;
+        width: 100%;
+        /* padding-left: 0px!important; */
+    }
+}
+
+
+/*
+    create by Hung-DV
+    12/5/2017
+*/
+
+@media (max-width: 770px) {
+    p.login-facebook-text {
+        text-align: center;
+        margin-top: 0%;
+        font-weight: 700;
+        font-size: 12px;
+        margin-left: 16px;
+        width: 100%;
+        /* padding-left: 0px!important; */
+    }
+}
+
+@media (max-width: 767px) {
+}
+/*
+    create by Hung-DV
+    12/5/2017
+*/
+.navbar-content.navbar-avatar {
+    width: 350px;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav > li {
+        border-top: 1px solid #656b7b;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #fff;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #9d9d9d;
+    }
+
+    .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+        padding: 5px 15px 5px 20px;
+    }
+
+    .navbar-nav .open .dropdown-menu > li > a {
+        line-height: 20px;
+    }
+
+    .navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu > li > a {
+        padding: 5px 15px 5px 25px;
+    }
+}
+
+.dropdown-menu > li > a {
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0;
+    color: #959c9d;
+    border-radius: 2px;
+}
+
+dropdowns.less:70 .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
