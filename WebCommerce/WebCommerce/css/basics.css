@@ -2478,7 +2478,7 @@ fieldset[disabled] .form-control {
 .control-group {
     margin-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px dashed #c9c9c9;
+    /*border-bottom: 1px dashed #c9c9c9;*/
 }
 
 .control-label {
