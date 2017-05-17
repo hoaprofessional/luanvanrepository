@@ -1,0 +1,409 @@
+﻿
+@{
+    Layout = "~/Views/Shared/WebLayout.cshtml";
+}
+
+<div id="content-forum">
+
+    <div class="breadcrumb-line clearfix">
+        <ul class="breadcrumb">
+            <!-- https://developers.google.com/structured-data/testing-tool/ -->
+
+            <li><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/index.php" data-original-title="" title=""><span class="icon fa fa-home"></span></a></li>
+            <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/index.php" data-navbar-reference="index" itemprop="url" data-original-title="" title=""><span itemprop="title">Board index</span></a></li>
+
+
+            <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a itemprop="url" href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/viewforum.php?f=1" data-forum-id="1" data-original-title="" title=""><span itemprop="title">First category</span></a></li>
+            <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a itemprop="url" href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/viewforum.php?f=17" data-forum-id="17" data-original-title="" title=""><span itemprop="title">Forum Test</span></a></li>
+
+        </ul>
+
+    </div>
+
+    <div id="page-body">
+        <h2><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/viewforum.php?f=17" data-original-title="" title="">Forum Test</a></h2>
+        <form id="postform" method="post" action="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?mode=post&amp;f=17" enctype="multipart/form-data">
+            <div class="clearfix" id="postingbox">
+                <div class="well">
+                    <div class="side-segment">
+                        <h3>Tạo bài viết</h3>
+                    </div>
+                    <fieldset>
+                        <div class="hidden-xs">
+                            <div class="control-group">
+                                <label class="control-label" for="icon">Loại chủ đề:</label>
+                                <div class="controls controls-row">
+                                    <div class="radio">
+                                        <div class="iradio_flat-aero checked" style="position: relative;">
+                                            @*<input type="radio" name="icon" id="icon" value="0" checked="checked" tabindex="1" style="position: absolute; opacity: 0;">*@
+                                            <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                        </div>
+                                        <label for="icon" class="">Mua hàng xách tay</label>
+                                    </div>
+                                    <div class="radio">
+                                        <div class="iradio_flat-aero" style="position: relative;">
+                                            @*<input type="radio" name="icon" id="icon-1" value="1" tabindex="1" style="position: absolute; opacity: 0;">*@
+                                            <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                        </div>
+                                        <label for="icon-1" class="">Bán hàng xách tay</label>
+                                    </div>
+                                    <div class="radio">
+                                        <div class="iradio_flat-aero" style="position: relative;">
+                                            @*<input type="radio" name="icon" id="icon-5" value="5" tabindex="1" style="position: absolute; opacity: 0;">*@
+                                            <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                        </div>
+                                        <label for="icon-5" class="">Thông tin xuất ngoại</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="subject">Tiêu đề</label>
+                            <div class="row">
+                                <div class="col-xs-12 col-lg-8">
+                                    <input type="text" class="form-control input-sm" placeholder="Tiêu đề:" name="subject" id="subject" maxlength="100" tabindex="2" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="subject">Tên sản phẩm</label>
+                            <div class="row">
+                                <div class="col-xs-12 col-lg-8">
+
+                                    <input type="text" class="form-control input-sm" placeholder="Tên sản phẩm" name="subject" id="subject" maxlength="100" tabindex="2" value="">
+                                </div>
+                            </div>
+                        </div><div class="row">
+                            <div class="col-xs-2">
+                                <div class="control-group">
+                                    <label class="control-label" for="subject">Loại sản phẩm</label>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-lg-8">
+
+                                            <button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" title="" data-original-title="&lt;i class=&quot;glyphicon fa fa-font&quot;&gt;&lt;/i&gt; Normal" style="width:180px;">
+                                                <span class="filter-option pull-left">Điện thoại</span>&nbsp;<span class="caret" style="margin-left: 60px;"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="control-group">
+                                    <label class="control-label" for="subject">Nhãn hiệu</label>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-lg-8">
+                                            <button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" title="" data-original-title="&lt;i class=&quot;glyphicon fa fa-font&quot;&gt;&lt;/i&gt; Normal" style="width:180px">
+                                                <span class="filter-option pull-left">Điện thoại</span>&nbsp;<span class="caret" style="margin-left: 60px;"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="control-group">
+                                    <label class="control-label" for="subject">Xuất xứ</label>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-lg-8">
+                                            <button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" title="" data-original-title="&lt;i class=&quot;glyphicon fa fa-font&quot;&gt;&lt;/i&gt; Normal" style="width:180px">
+                                                <span class="filter-option pull-left">Hàn Quốc</span>&nbsp;<span class="caret" style="margin-left: 60px;"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="control-group">
+                            <label class="control-label" for="subject">Giá:</label>
+                            <div class="row">
+                                <div class="col-xs-4">
+
+                                    <input type="text" class="form-control input-sm" placeholder="Từ" name="subject" id="subject" maxlength="100" tabindex="2" value="">
+
+                                </div>
+                                <div class="col-xs-4">
+
+                                    <input type="text" class="form-control input-sm" placeholder="Đến" name="subject" id="subject" maxlength="100" tabindex="2" value="">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="subject">Số điện thoại:</label>
+                            <div class="row">
+                                <div class="col-xs-12 col-lg-8">
+
+                                    <input type="text" class="form-control input-sm" placeholder="" name="subject" id="subject" maxlength="50" tabindex="2" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="subject">Địa chỉ:</label>
+                            <div class="row">
+                                <div class="col-xs-12 col-lg-8">
+
+                                    <input type="text" class="form-control input-sm" placeholder="" name="subject" id="subject" maxlength="100" tabindex="2" value="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="subject">Thông tin khác:</label>
+                        </div>
+
+
+                        <script>
+                            var form_name = 'postform';
+                            var text_name = 'message';
+                            var load_draft = false;
+                            var upload = false;
+
+                            // Define the bbCode tags
+                            var bbcode = new Array();
+                            var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[code]','[/code]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[flash=]', '[/flash]','[size=]','[/size]', '[vimeo]', '[/vimeo]');
+                            var imageTag = false;
+
+                            // Helpline messages
+                            var help_line = {
+                                b: 'Bold text: [b]text[/b]',
+                                i: 'Italic text: [i]text[/i]',
+                                u: 'Underline text: [u]text[/u]',
+                                q: 'Quote text: [quote]text[/quote]',
+                                c: 'Code display: [code]code[/code]',
+                                l: 'List: [list][*]text[/list]',
+                                o: 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
+                                p: 'Insert image: [img]http://image_url[/img]',
+                                w: 'Insert URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
+                                a: 'Inline uploaded attachment: [attachment=]filename.ext[/attachment]',
+                                s: 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
+                                f: 'Font size: [size=85]small text[/size]',
+                                y: 'List: Add list element',
+                                d: 'Flash: [flash=width,height]http://url[/flash]',
+                                cb_22: '[vimeo]10113250[/vimeo]'
+                            }
+
+                            function change_palette()
+                            {
+                                phpbb.toggleDisplay('colour_palette');
+                                e = document.getElementById('colour_palette');
+
+                                if (e.style.display == 'block')
+                                {
+                                    document.getElementById('bbpalette').value = 'Hide font colour';
+                                }
+                                else
+                                {
+                                    document.getElementById('bbpalette').value = 'Font colour';
+                                }
+                            }
+                        </script>
+                        <script src="./editor.js.tải xuống"></script>
+                        <div id="colour_palette" style="display: none;">
+                            <label class="control-label">Font colour:</label>
+                            <div id="color_palette_placeholder" data-orientation="h" data-height="12" data-width="15" data-bbcode="true"><table class="not-responsive colour-palette horizontal-palette" style="width: auto;"><tbody><tr><td style="background-color: #000000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="000000" style="display: block; width: 15px; height: 12px; " alt="#000000" title="#000000"></a></td><td style="background-color: #000040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="000040" style="display: block; width: 15px; height: 12px; " alt="#000040" title="#000040"></a></td><td style="background-color: #000080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="000080" style="display: block; width: 15px; height: 12px; " alt="#000080" title="#000080"></a></td><td style="background-color: #0000BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="0000BF" style="display: block; width: 15px; height: 12px; " alt="#0000BF" title="#0000BF"></a></td><td style="background-color: #0000FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="0000FF" style="display: block; width: 15px; height: 12px; " alt="#0000FF" title="#0000FF"></a></td><td style="background-color: #004000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="004000" style="display: block; width: 15px; height: 12px; " alt="#004000" title="#004000"></a></td><td style="background-color: #004040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="004040" style="display: block; width: 15px; height: 12px; " alt="#004040" title="#004040"></a></td><td style="background-color: #004080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="004080" style="display: block; width: 15px; height: 12px; " alt="#004080" title="#004080"></a></td><td style="background-color: #0040BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="0040BF" style="display: block; width: 15px; height: 12px; " alt="#0040BF" title="#0040BF"></a></td><td style="background-color: #0040FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="0040FF" style="display: block; width: 15px; height: 12px; " alt="#0040FF" title="#0040FF"></a></td><td style="background-color: #008000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="008000" style="display: block; width: 15px; height: 12px; " alt="#008000" title="#008000"></a></td><td style="background-color: #008040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="008040" style="display: block; width: 15px; height: 12px; " alt="#008040" title="#008040"></a></td><td style="background-color: #008080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="008080" style="display: block; width: 15px; height: 12px; " alt="#008080" title="#008080"></a></td><td style="background-color: #0080BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="0080BF" style="display: block; width: 15px; height: 12px; " alt="#0080BF" title="#0080BF"></a></td><td style="background-color: #0080FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="0080FF" style="display: block; width: 15px; height: 12px; " alt="#0080FF" title="#0080FF"></a></td><td style="background-color: #00BF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00BF00" style="display: block; width: 15px; height: 12px; " alt="#00BF00" title="#00BF00"></a></td><td style="background-color: #00BF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00BF40" style="display: block; width: 15px; height: 12px; " alt="#00BF40" title="#00BF40"></a></td><td style="background-color: #00BF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00BF80" style="display: block; width: 15px; height: 12px; " alt="#00BF80" title="#00BF80"></a></td><td style="background-color: #00BFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00BFBF" style="display: block; width: 15px; height: 12px; " alt="#00BFBF" title="#00BFBF"></a></td><td style="background-color: #00BFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00BFFF" style="display: block; width: 15px; height: 12px; " alt="#00BFFF" title="#00BFFF"></a></td><td style="background-color: #00FF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00FF00" style="display: block; width: 15px; height: 12px; " alt="#00FF00" title="#00FF00"></a></td><td style="background-color: #00FF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00FF40" style="display: block; width: 15px; height: 12px; " alt="#00FF40" title="#00FF40"></a></td><td style="background-color: #00FF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00FF80" style="display: block; width: 15px; height: 12px; " alt="#00FF80" title="#00FF80"></a></td><td style="background-color: #00FFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00FFBF" style="display: block; width: 15px; height: 12px; " alt="#00FFBF" title="#00FFBF"></a></td><td style="background-color: #00FFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="00FFFF" style="display: block; width: 15px; height: 12px; " alt="#00FFFF" title="#00FFFF"></a></td></tr><tr><td style="background-color: #400000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="400000" style="display: block; width: 15px; height: 12px; " alt="#400000" title="#400000"></a></td><td style="background-color: #400040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="400040" style="display: block; width: 15px; height: 12px; " alt="#400040" title="#400040"></a></td><td style="background-color: #400080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="400080" style="display: block; width: 15px; height: 12px; " alt="#400080" title="#400080"></a></td><td style="background-color: #4000BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="4000BF" style="display: block; width: 15px; height: 12px; " alt="#4000BF" title="#4000BF"></a></td><td style="background-color: #4000FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="4000FF" style="display: block; width: 15px; height: 12px; " alt="#4000FF" title="#4000FF"></a></td><td style="background-color: #404000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="404000" style="display: block; width: 15px; height: 12px; " alt="#404000" title="#404000"></a></td><td style="background-color: #404040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="404040" style="display: block; width: 15px; height: 12px; " alt="#404040" title="#404040"></a></td><td style="background-color: #404080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="404080" style="display: block; width: 15px; height: 12px; " alt="#404080" title="#404080"></a></td><td style="background-color: #4040BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="4040BF" style="display: block; width: 15px; height: 12px; " alt="#4040BF" title="#4040BF"></a></td><td style="background-color: #4040FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="4040FF" style="display: block; width: 15px; height: 12px; " alt="#4040FF" title="#4040FF"></a></td><td style="background-color: #408000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="408000" style="display: block; width: 15px; height: 12px; " alt="#408000" title="#408000"></a></td><td style="background-color: #408040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="408040" style="display: block; width: 15px; height: 12px; " alt="#408040" title="#408040"></a></td><td style="background-color: #408080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="408080" style="display: block; width: 15px; height: 12px; " alt="#408080" title="#408080"></a></td><td style="background-color: #4080BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="4080BF" style="display: block; width: 15px; height: 12px; " alt="#4080BF" title="#4080BF"></a></td><td style="background-color: #4080FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="4080FF" style="display: block; width: 15px; height: 12px; " alt="#4080FF" title="#4080FF"></a></td><td style="background-color: #40BF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40BF00" style="display: block; width: 15px; height: 12px; " alt="#40BF00" title="#40BF00"></a></td><td style="background-color: #40BF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40BF40" style="display: block; width: 15px; height: 12px; " alt="#40BF40" title="#40BF40"></a></td><td style="background-color: #40BF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40BF80" style="display: block; width: 15px; height: 12px; " alt="#40BF80" title="#40BF80"></a></td><td style="background-color: #40BFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40BFBF" style="display: block; width: 15px; height: 12px; " alt="#40BFBF" title="#40BFBF"></a></td><td style="background-color: #40BFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40BFFF" style="display: block; width: 15px; height: 12px; " alt="#40BFFF" title="#40BFFF"></a></td><td style="background-color: #40FF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40FF00" style="display: block; width: 15px; height: 12px; " alt="#40FF00" title="#40FF00"></a></td><td style="background-color: #40FF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40FF40" style="display: block; width: 15px; height: 12px; " alt="#40FF40" title="#40FF40"></a></td><td style="background-color: #40FF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40FF80" style="display: block; width: 15px; height: 12px; " alt="#40FF80" title="#40FF80"></a></td><td style="background-color: #40FFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40FFBF" style="display: block; width: 15px; height: 12px; " alt="#40FFBF" title="#40FFBF"></a></td><td style="background-color: #40FFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="40FFFF" style="display: block; width: 15px; height: 12px; " alt="#40FFFF" title="#40FFFF"></a></td></tr><tr><td style="background-color: #800000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="800000" style="display: block; width: 15px; height: 12px; " alt="#800000" title="#800000"></a></td><td style="background-color: #800040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="800040" style="display: block; width: 15px; height: 12px; " alt="#800040" title="#800040"></a></td><td style="background-color: #800080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="800080" style="display: block; width: 15px; height: 12px; " alt="#800080" title="#800080"></a></td><td style="background-color: #8000BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="8000BF" style="display: block; width: 15px; height: 12px; " alt="#8000BF" title="#8000BF"></a></td><td style="background-color: #8000FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="8000FF" style="display: block; width: 15px; height: 12px; " alt="#8000FF" title="#8000FF"></a></td><td style="background-color: #804000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="804000" style="display: block; width: 15px; height: 12px; " alt="#804000" title="#804000"></a></td><td style="background-color: #804040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="804040" style="display: block; width: 15px; height: 12px; " alt="#804040" title="#804040"></a></td><td style="background-color: #804080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="804080" style="display: block; width: 15px; height: 12px; " alt="#804080" title="#804080"></a></td><td style="background-color: #8040BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="8040BF" style="display: block; width: 15px; height: 12px; " alt="#8040BF" title="#8040BF"></a></td><td style="background-color: #8040FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="8040FF" style="display: block; width: 15px; height: 12px; " alt="#8040FF" title="#8040FF"></a></td><td style="background-color: #808000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="808000" style="display: block; width: 15px; height: 12px; " alt="#808000" title="#808000"></a></td><td style="background-color: #808040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="808040" style="display: block; width: 15px; height: 12px; " alt="#808040" title="#808040"></a></td><td style="background-color: #808080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="808080" style="display: block; width: 15px; height: 12px; " alt="#808080" title="#808080"></a></td><td style="background-color: #8080BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="8080BF" style="display: block; width: 15px; height: 12px; " alt="#8080BF" title="#8080BF"></a></td><td style="background-color: #8080FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="8080FF" style="display: block; width: 15px; height: 12px; " alt="#8080FF" title="#8080FF"></a></td><td style="background-color: #80BF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80BF00" style="display: block; width: 15px; height: 12px; " alt="#80BF00" title="#80BF00"></a></td><td style="background-color: #80BF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80BF40" style="display: block; width: 15px; height: 12px; " alt="#80BF40" title="#80BF40"></a></td><td style="background-color: #80BF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80BF80" style="display: block; width: 15px; height: 12px; " alt="#80BF80" title="#80BF80"></a></td><td style="background-color: #80BFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80BFBF" style="display: block; width: 15px; height: 12px; " alt="#80BFBF" title="#80BFBF"></a></td><td style="background-color: #80BFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80BFFF" style="display: block; width: 15px; height: 12px; " alt="#80BFFF" title="#80BFFF"></a></td><td style="background-color: #80FF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80FF00" style="display: block; width: 15px; height: 12px; " alt="#80FF00" title="#80FF00"></a></td><td style="background-color: #80FF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80FF40" style="display: block; width: 15px; height: 12px; " alt="#80FF40" title="#80FF40"></a></td><td style="background-color: #80FF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80FF80" style="display: block; width: 15px; height: 12px; " alt="#80FF80" title="#80FF80"></a></td><td style="background-color: #80FFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80FFBF" style="display: block; width: 15px; height: 12px; " alt="#80FFBF" title="#80FFBF"></a></td><td style="background-color: #80FFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="80FFFF" style="display: block; width: 15px; height: 12px; " alt="#80FFFF" title="#80FFFF"></a></td></tr><tr><td style="background-color: #BF0000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF0000" style="display: block; width: 15px; height: 12px; " alt="#BF0000" title="#BF0000"></a></td><td style="background-color: #BF0040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF0040" style="display: block; width: 15px; height: 12px; " alt="#BF0040" title="#BF0040"></a></td><td style="background-color: #BF0080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF0080" style="display: block; width: 15px; height: 12px; " alt="#BF0080" title="#BF0080"></a></td><td style="background-color: #BF00BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF00BF" style="display: block; width: 15px; height: 12px; " alt="#BF00BF" title="#BF00BF"></a></td><td style="background-color: #BF00FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF00FF" style="display: block; width: 15px; height: 12px; " alt="#BF00FF" title="#BF00FF"></a></td><td style="background-color: #BF4000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF4000" style="display: block; width: 15px; height: 12px; " alt="#BF4000" title="#BF4000"></a></td><td style="background-color: #BF4040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF4040" style="display: block; width: 15px; height: 12px; " alt="#BF4040" title="#BF4040"></a></td><td style="background-color: #BF4080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF4080" style="display: block; width: 15px; height: 12px; " alt="#BF4080" title="#BF4080"></a></td><td style="background-color: #BF40BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF40BF" style="display: block; width: 15px; height: 12px; " alt="#BF40BF" title="#BF40BF"></a></td><td style="background-color: #BF40FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF40FF" style="display: block; width: 15px; height: 12px; " alt="#BF40FF" title="#BF40FF"></a></td><td style="background-color: #BF8000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF8000" style="display: block; width: 15px; height: 12px; " alt="#BF8000" title="#BF8000"></a></td><td style="background-color: #BF8040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF8040" style="display: block; width: 15px; height: 12px; " alt="#BF8040" title="#BF8040"></a></td><td style="background-color: #BF8080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF8080" style="display: block; width: 15px; height: 12px; " alt="#BF8080" title="#BF8080"></a></td><td style="background-color: #BF80BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF80BF" style="display: block; width: 15px; height: 12px; " alt="#BF80BF" title="#BF80BF"></a></td><td style="background-color: #BF80FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BF80FF" style="display: block; width: 15px; height: 12px; " alt="#BF80FF" title="#BF80FF"></a></td><td style="background-color: #BFBF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFBF00" style="display: block; width: 15px; height: 12px; " alt="#BFBF00" title="#BFBF00"></a></td><td style="background-color: #BFBF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFBF40" style="display: block; width: 15px; height: 12px; " alt="#BFBF40" title="#BFBF40"></a></td><td style="background-color: #BFBF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFBF80" style="display: block; width: 15px; height: 12px; " alt="#BFBF80" title="#BFBF80"></a></td><td style="background-color: #BFBFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFBFBF" style="display: block; width: 15px; height: 12px; " alt="#BFBFBF" title="#BFBFBF"></a></td><td style="background-color: #BFBFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFBFFF" style="display: block; width: 15px; height: 12px; " alt="#BFBFFF" title="#BFBFFF"></a></td><td style="background-color: #BFFF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFFF00" style="display: block; width: 15px; height: 12px; " alt="#BFFF00" title="#BFFF00"></a></td><td style="background-color: #BFFF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFFF40" style="display: block; width: 15px; height: 12px; " alt="#BFFF40" title="#BFFF40"></a></td><td style="background-color: #BFFF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFFF80" style="display: block; width: 15px; height: 12px; " alt="#BFFF80" title="#BFFF80"></a></td><td style="background-color: #BFFFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFFFBF" style="display: block; width: 15px; height: 12px; " alt="#BFFFBF" title="#BFFFBF"></a></td><td style="background-color: #BFFFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="BFFFFF" style="display: block; width: 15px; height: 12px; " alt="#BFFFFF" title="#BFFFFF"></a></td></tr><tr><td style="background-color: #FF0000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF0000" style="display: block; width: 15px; height: 12px; " alt="#FF0000" title="#FF0000"></a></td><td style="background-color: #FF0040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF0040" style="display: block; width: 15px; height: 12px; " alt="#FF0040" title="#FF0040"></a></td><td style="background-color: #FF0080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF0080" style="display: block; width: 15px; height: 12px; " alt="#FF0080" title="#FF0080"></a></td><td style="background-color: #FF00BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF00BF" style="display: block; width: 15px; height: 12px; " alt="#FF00BF" title="#FF00BF"></a></td><td style="background-color: #FF00FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF00FF" style="display: block; width: 15px; height: 12px; " alt="#FF00FF" title="#FF00FF"></a></td><td style="background-color: #FF4000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF4000" style="display: block; width: 15px; height: 12px; " alt="#FF4000" title="#FF4000"></a></td><td style="background-color: #FF4040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF4040" style="display: block; width: 15px; height: 12px; " alt="#FF4040" title="#FF4040"></a></td><td style="background-color: #FF4080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF4080" style="display: block; width: 15px; height: 12px; " alt="#FF4080" title="#FF4080"></a></td><td style="background-color: #FF40BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF40BF" style="display: block; width: 15px; height: 12px; " alt="#FF40BF" title="#FF40BF"></a></td><td style="background-color: #FF40FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF40FF" style="display: block; width: 15px; height: 12px; " alt="#FF40FF" title="#FF40FF"></a></td><td style="background-color: #FF8000; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF8000" style="display: block; width: 15px; height: 12px; " alt="#FF8000" title="#FF8000"></a></td><td style="background-color: #FF8040; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF8040" style="display: block; width: 15px; height: 12px; " alt="#FF8040" title="#FF8040"></a></td><td style="background-color: #FF8080; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF8080" style="display: block; width: 15px; height: 12px; " alt="#FF8080" title="#FF8080"></a></td><td style="background-color: #FF80BF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF80BF" style="display: block; width: 15px; height: 12px; " alt="#FF80BF" title="#FF80BF"></a></td><td style="background-color: #FF80FF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FF80FF" style="display: block; width: 15px; height: 12px; " alt="#FF80FF" title="#FF80FF"></a></td><td style="background-color: #FFBF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFBF00" style="display: block; width: 15px; height: 12px; " alt="#FFBF00" title="#FFBF00"></a></td><td style="background-color: #FFBF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFBF40" style="display: block; width: 15px; height: 12px; " alt="#FFBF40" title="#FFBF40"></a></td><td style="background-color: #FFBF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFBF80" style="display: block; width: 15px; height: 12px; " alt="#FFBF80" title="#FFBF80"></a></td><td style="background-color: #FFBFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFBFBF" style="display: block; width: 15px; height: 12px; " alt="#FFBFBF" title="#FFBFBF"></a></td><td style="background-color: #FFBFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFBFFF" style="display: block; width: 15px; height: 12px; " alt="#FFBFFF" title="#FFBFFF"></a></td><td style="background-color: #FFFF00; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFFF00" style="display: block; width: 15px; height: 12px; " alt="#FFFF00" title="#FFFF00"></a></td><td style="background-color: #FFFF40; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFFF40" style="display: block; width: 15px; height: 12px; " alt="#FFFF40" title="#FFFF40"></a></td><td style="background-color: #FFFF80; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFFF80" style="display: block; width: 15px; height: 12px; " alt="#FFFF80" title="#FFFF80"></a></td><td style="background-color: #FFFFBF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFFFBF" style="display: block; width: 15px; height: 12px; " alt="#FFFFBF" title="#FFFFBF"></a></td><td style="background-color: #FFFFFF; width: 15px; height: 12px;"><a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" data-color="FFFFFF" style="display: block; width: 15px; height: 12px; " alt="#FFFFFF" title="#FFFFFF"></a></td></tr></tbody></table></div>
+                        </div>
+                        <div class="space10"></div>
+                        <div id="imgurAnchor" class="btn-toolbar" role="toolbar">
+
+                            <div class="btn-group">
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="b" name="addbbcode0" onclick="bbstyle(0); return false;" title="" data-original-title="Bold text: [b]text[/b]"><i class="fa fa-bold"></i></a>
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="i" name="addbbcode2" onclick="bbstyle(2); return false;" title="" data-original-title="Italic text: [i]text[/i]"><i class="fa fa-italic"></i></a>
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="u" name="addbbcode4" onclick="bbstyle(4); return false;" title="" data-original-title="Underline text: [u]text[/u]"><i class="fa fa-underline"></i></a>
+                            </div>
+
+                            <div class="btn-group hidden-xs">
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="l" name="addbbcode10" onclick="bbstyle(10); return false;" title="" data-original-title="List: [list][*]text[/list]"><i class="fa fa-list"></i></a>
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="o" name="addbbcode12" onclick="bbstyle(12); return false;" title="" data-original-title="Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]"><i class="fa fa-list-ol"></i></a>
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="y" name="addlistitem" onclick="bbstyle(-1); return false;" title="" data-original-title="List item: [*]text"><i class="fa fa-asterisk"></i></a>
+                            </div>
+
+                            <div class="btn-group">
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="c" name="addbbcode8" onclick="bbstyle(8); return false;" title="" data-original-title="Code display: [code]code[/code]"><i class="fa fa-code"></i></a>
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="q" name="addbbcode6" onclick="bbstyle(6); return false;" title="" data-original-title="Quote text: [quote]text[/quote]"><i class="fa fa-comment"></i></a>
+
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="p" name="addbbcode14" onclick="bbstyle(14); return false;" title="" data-original-title="Insert image: [img]http://image_url[/img]"><i class="fa fa-picture-o"></i></a>
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" accesskey="w" name="addbbcode16" onclick="bbstyle(16); return false;" title="" data-original-title="Insert URL: [url]http://url[/url] or [url=http://url]URL text[/url]"><i class="fa fa-link"></i></a>
+                            </div>
+
+                            <div class="btn-group hidden-xs">
+                                <a href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#" class="btn btn-default" name="bbpalette" id="bbpalette" value="Font colour" onclick="change_palette(); return false;" title="" data-original-title="Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]"><i class="fa fa-tint"></i>
+                                </a>
+                            </div>
+
+                            <select class="selectpicker" data-style="btn-default" data-width="auto" name="addbbcode20" title="" data-original-title="Font size: [size=85]small text[/size]" style="display:none">
+                                <option value="50">Tiny</option>
+                                <option value="85">Small</option>
+                                <option data-icon="fa fa-font" value="100" selected="selected">Normal</option>
+                                <option value="150">Large</option>
+                                <option value="200">Huge</option>
+                            </select>
+
+                            @*<div class="btn-group bootstrap-select">
+                                <button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" title="" data-original-title="&lt;i class=&quot;glyphicon fa fa-font&quot;&gt;&lt;/i&gt; Normal"><span class="filter-option pull-left"><i class="glyphicon fa fa-font"></i> Normal</span>&nbsp;<span class="caret"></span></button>
+                                <div class="dropdown-menu open" style="min-width: 0px;">
+                                    <ul class="dropdown-menu inner selectpicker" role="menu" data-original-title="" title="">
+                                        <li rel="0">
+                                            <a tabindex="0" class="" style="" data-original-title="" title="">
+                                                <span class="text">Tiny</span>
+                                                <i class="glyphicon glyphicon-ok icon-ok check-mark"></i>
+                                            </a>
+                                        </li>
+                                        <li rel="1">
+                                            <a tabindex="0" class="" style="" data-original-title="" title="">
+                                                <span class="text">Small</span>
+                                                <i class="glyphicon glyphicon-ok icon-ok check-mark"></i>
+                                            </a>
+                                        </li>
+                                        <li rel="2" class="selected">
+                                            <a tabindex="0" class="" style="" data-original-title="" title="">
+                                                <i class="glyphicon fa fa-font"></i> <span class="text">Normal</span>
+                                                <i class="glyphicon glyphicon-ok icon-ok check-mark"></i>
+                                            </a>
+                                        </li>
+                                        <li rel="3">
+                                            <a tabindex="0" class="" style="" data-original-title="" title="">
+                                                <span class="text">Large</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i>
+                                            </a>
+                                        </li>
+                                        <li rel="4">
+                                            <a tabindex="0" class="" style="" data-original-title="" title="">
+                                                <span class="text">Huge</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>*@
+
+                            <select class="selectpicker" data-style="btn-default" data-width="auto" name="addbbcode_custom" onchange="bbstyle(this.form.addbbcode_custom.options[this.form.addbbcode_custom.selectedIndex].value*1);this.form.addbbcode_custom.selectedIndex = 0;" data-original-title="" title="" style="display: none;">
+                                <option data-icon="fa fa-cog" value="100" selected="selected">BBCODES</option>
+                                <option value="22" title="[vimeo]10113250[/vimeo]">vimeo</option>
+                            </select>
+
+                            <div class="btn-group bootstrap-select" style="width: 130px;">
+                                @*<button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" title="" data-original-title="&lt;i class=&quot;glyphicon fa fa-cog&quot;&gt;&lt;/i&gt; BBCODES"><span class="filter-option pull-left"><i class="glyphicon fa fa-cog"></i> BBCODES</span>&nbsp;<span class="caret"></span></button>*@
+                                <div class="dropdown-menu open" style="min-width: 0px;">
+                                    <ul class="dropdown-menu inner selectpicker" role="menu" data-original-title="" title="">
+                                        <li rel="0" class="selected">
+                                            <a tabindex="0" class="" style="" data-original-title="" title="">
+                                                <i class="glyphicon fa fa-cog"></i> <span class="text">BBCODES</span>
+                                                <i class="glyphicon glyphicon-ok icon-ok check-mark"></i>
+                                            </a>
+                                        </li>
+                                        <li rel="1">
+                                            <a tabindex="0" class="" style="" data-original-title="" title="">
+                                                <span class="text">vimeo</span>
+                                                <i class="glyphicon glyphicon-ok icon-ok check-mark"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="space10"></div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <span id="dragNdrop">
+                                    <textarea class="form-control" rows="10" name="message" id="message" tabindex="4" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" placeholder="" style="position: relative;"></textarea>
+                                    <span>
+                                    </span>
+                                </span>
+                            </div>
+                            <script>s9eNemtionsUrl="/demo/phpBB3/FLATBOOTS/phpbb31/app.php/nemtions/?t=0"</script>
+
+                        </div>
+                    </fieldset>
+
+                </div>
+
+                <fieldset class="form-actions">
+
+                    <input type="hidden" name="lastclick" value="1494598322">
+                    <button type="submit" class="btn btn-default" data-loading-text="Saving... &lt;i class=&#39;fa fa-spin fa-spinner fa-lg icon-white&#39;&gt;&lt;/i&gt;" accesskey="k" tabindex="7" name="save" value="Save draft"><span class="hidden-xs">Save draft</span><i class="visible-xs glyphicon glyphicon-floppy-saved fa-btn-fx"></i></button>			<button type="submit" class="btn btn-default" data-loading-text="Loading &lt;i class=&#39;fa fa-spin fa-spinner fa-lg icon-white&#39;&gt;&lt;/i&gt;" tabindex="5" name="preview" value="Preview" onclick="">Preview</button>
+                    <button type="submit" class="btn btn-default" data-loading-text="Loading &lt;i class=&#39;fa fa-spin fa-spinner fa-lg icon-white&#39;&gt;&lt;/i&gt;" accesskey="s" tabindex="6" name="post" value="Submit">Submit</button>
+                </fieldset>
+
+                <div class="space10"></div>
+                <script>
+function addClass(e,s){e.classList?e.classList.add(s):e.className+=" "+s}function removeClass(e,s){e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp("(^|\\b)"+s.split(" ").join("|")+"(\\b|$)","gi")," ")}function txtDropClicked(){removeClassesOnFocus(!1),addClass(document.getElementById("message"),"dropzone-wrap"),addClass(document.getElementById("dragNdrop"),"dropzone-content")}function removeClassesOnFocus(e){var s=e===!1?document.getElementById("message"):e.target;removeClass(s,"dropzone-wrap"),removeClass(s.parentNode,"dropzone-content")}window.addEventListener("load",function(){document.getElementById("ToggleTxTDrop").addEventListener("click",txtDropClicked),document.getElementById("message").addEventListener("focus",removeClassesOnFocus)});
+                </script>
+                <div class="panel has-nav-tabs panel-default">
+                    <!-- panel has-nav-tabs no-border with tab start tag here posting_layout.html -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#posting-attach-body-html" id="ToggleTxTDrop" data-original-title="" title=""><span>Upload attachment</span></a></li>
+                        <li class=""><a data-toggle="tab" href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/posting.php?f=17&amp;mode=post&amp;sid=a78ba53a1b8c83b8f9bc0bfb47d7ca4d#posting-poll-html" data-original-title="" title=""><span>Poll creation</span></a></li>
+                    </ul>
+
+                    <div class="tab-content panel-content">
+                        
+                        <div class="panel-body tab-pane active" id="posting-attach-body-html">
+                            <p>If you wish to attach one or more files enter the details below.<span class="hidden" id="drag-n-drop-message" style="display: inline;">&nbsp;You may also attach files by dragging and dropping them in the message box.</span></p>
+                            <div class="clearfix" id="attach-panel">
+
+                                <div id="attach-panel-multi" style="position: relative; display: block;">
+                                    <button type="button" class="btn btn-default" value="Add files" id="add_files" style="position: relative; z-index: 1;"><i class="fa fa-cloud-upload"></i>&nbsp;Add files</button>
+                                    <div id="html5_1bfufshv017ot1pcc1a7qcemg1e3_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px; overflow: hidden; z-index: 0;"><input id="html5_1bfufshv017ot1pcc1a7qcemg1e3" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" multiple="" accept="image/gif,.gif,image/png,.png,image/jpeg,.jpeg,.jpg,image/tiff,.tif,.tiff,.tga,.gtar,.gz,.tar,application/zip,.zip,.rar,.ace,.torrent,.tgz,.bz2,.7z"></div>
+                                </div>
+                                <div id="file-list-container" class="hidden">
+                                    <div id="file-list">
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body tab-pane" id="posting-poll-html">
+                            <p>If you do not want to add a poll to your topic leave the fields blank.</p>
+
+                            <fieldset>
+                                <div class="control-group">
+                                    <label class="control-label" for="poll_title">Poll question:</label>
+                                    <div class="controls controls-row">
+                                        <input type="text" class="form-control input-sm" placeholder="" name="poll_title" id="poll_title" maxlength="255" value="">
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label" for="poll_option_text">Poll options:</label><span class="help-block">Place each option on a new line. You may enter up to <strong>10</strong> options.</span>
+                                    <div class="controls controls-row">
+                                        <textarea placeholder="" rows="4" name="poll_option_text" id="poll_option_text" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="control-label" for="poll_max_options">Options per user:</label><span class="help-block">Enter the max number of options the user can select</span>
+                                            <div class="input-group col-xs-7">
+                                                <input type="number" min="0" max="999" name="poll_max_options" id="poll_max_options" value="1" placeholder="" class="form-control input-sm">
+                                                <span class="input-group-addon">Options</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="control-label" for="poll_length">Run poll for:</label><span class="help-block">Enter 0 for a never ending poll.</span>
+                                            <div class="input-group col-xs-7">
+                                                <input type="number" name="poll_length" id="poll_length" size="3" maxlength="3" value="0" placeholder="" class="form-control input-sm" min="0" max="999">
+                                                <span class="input-group-addon">Days</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="control-label" for="poll_vote_change">Allow re-voting:</label><span class="help-block">If enabled users are able to change their vote.</span>
+                                            <div class="controls controls-row">
+                                                <div class="icheckbox_flat-aero" style="position: relative;"><input type="checkbox" id="poll_vote_change" name="poll_vote_change" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div><label class="checkbox-inline" for="poll_vote_change">Allow Re-vote</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    </div>
+
+                </div><!-- panel has-nav-tabs no-border with tab ends tag here posting_editor.html -->
+
+                <div class="space10"></div>
+
+            </div>
+        </form>
+
+</div>
+
+</div>
