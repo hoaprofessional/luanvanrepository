@@ -26,73 +26,80 @@
 </div>
 
 <div class="additional-infomation">
+    
+    
+
     <div class="featured-topic">
         <div class="featured-topic-title title-item">Bài viết nổi bật</div>
-        <div class="featured-topic-items">
-
-            @foreach (var topic in top10Topics)
-            {
-                <div class="topic-item">
-                    <div class="author-avatar" style="background: url(@topic.Avatar);background-repeat: no-repeat; background-size: contain;"></div>
-                    <div class="topic-content">
-                        <div class="topic-left-group">
-                            <div class="topic-header">
-                                @topic.TopicName
-                            </div>
-                        </div>
-                        
-                        <div class="statistics">
-                            
-                            <div class="author-topic">
-                                @topic.CreatedBy
-                            </div>
-
-                            <div class="date-create-topic">
-                                @topic.CreateDateStr
-                            </div>
-
-                            <div class="no-of-view-group statistics-item">
-                                <div class="no-of-view statistics-text">@topic.NoOfViews</div>
-                                <div class="no-of-view-icon statistics-icon"></div>
-                            </div>
-                            <div class="no-of-like-group statistics-item">
-                                <div class="no-of-like statistics-text">@topic.NoOfLikes</div>
-                                <div class="no-of-like-icon statistics-icon"></div>
-                            </div>
-                            <div class="no-of-comment-group statistics-item">
-                                <div class="no-of-comment statistics-text">@topic.NoOfComments</div>
-                                <div class="no-of-comment-icon statistics-icon"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            }
-
-        </div>
-
-    </div>
-    <div class="right-content">
-        <div class="new-topics">
-            <div class="new-topic-title title-item">
-                Bài đăng mới
-            </div>
-            <div class="new-topic-content">
-                
-                @foreach (var topic in lastestTopics)
+        <div class="content-expand">
+            <div class="featured-topic-items">
+                @foreach (var topic in top10Topics)
                 {
-                    <div class="new-topic-item">
-                        <div style="background: url(@topic.Avatar);background-repeat: no-repeat; background-size: contain;" class="author-avatar"></div>
+                    <div class="topic-item">
+                        <div class="author-avatar" style="background: url(@topic.Avatar); background-repeat: no-repeat; background-size: contain;"></div>
                         <div class="topic-content">
                             <div class="topic-left-group">
                                 <div class="topic-header">
                                     @topic.TopicName
                                 </div>
                             </div>
+
+                            <div class="statistics">
+
+                                <div class="author-topic">
+                                    @topic.CreatedBy
+                                </div>
+
+                                <div class="date-create-topic">
+                                    @topic.CreateDateStr
+                                </div>
+
+                                <div class="no-of-view-group statistics-item">
+                                    <div class="no-of-view statistics-text">@topic.NoOfViews</div>
+                                    <div class="no-of-view-icon statistics-icon"></div>
+                                </div>
+                                <div class="no-of-like-group statistics-item">
+                                    <div class="no-of-like statistics-text">@topic.NoOfLikes</div>
+                                    <div class="no-of-like-icon statistics-icon"></div>
+                                </div>
+                                <div class="no-of-comment-group statistics-item">
+                                    <div class="no-of-comment statistics-text">@topic.NoOfComments</div>
+                                    <div class="no-of-comment-icon statistics-icon"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 }
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="right-content">
+        <div class="new-topics">
+            <div class="new-topic-title title-item">
+                Bài đăng mới
+            </div>
+            <div class="content-expand">
+                <div class="new-topic-content">
+                    @foreach (var topic in lastestTopics)
+                    {
+                        <div class="new-topic-item">
+                            <div style="background: url(@topic.Avatar); background-repeat: no-repeat; background-size: contain;" class="author-avatar"></div>
+                            <div class="topic-content">
+                                <div class="topic-left-group">
+                                    <div class="topic-header">
+                                        @topic.TopicName
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                </div>
             </div>
         </div>
         <div class="outstanding-seller">
@@ -100,24 +107,26 @@
             <div class="outstanding-seller-title title-item">
                 Người bán nổi bật
             </div>
+            <div class="content-expand">
+                <div class="out-standing-seller-items">
 
-            <div class="out-standing-seller-items">
-                
-                @foreach (var item in sellerViewModels)
-                {
-                    <div class="out-standing-seller-item">
-                        <div class="seller-avatar" style="background: url( @item.Avatar); background-size: contain; background-repeat: no-repeat;"></div>
-                        <div class="out-standing-content">
-                            <div class="seller-name">
-                                @item.Name
-                            </div>
-                            <div class="seller-bonus">
-                                @item.Bonus
+                    @foreach (var item in sellerViewModels)
+                    {
+                        <div class="out-standing-seller-item">
+                            <div class="seller-avatar" style="background: url(@item.Avatar); background-size: contain; background-repeat: no-repeat;"></div>
+                            <div class="out-standing-content">
+                                <div class="seller-name">
+                                    @item.Name
+                                </div>
+                                <div class="seller-bonus">
+                                    @item.Bonus
+                                </div>
                             </div>
                         </div>
-                    </div>
-                }
+                    }
+                </div>
             </div>
         </div>
     </div>
 </div>
+<script src="~/js/expand.js"></script>

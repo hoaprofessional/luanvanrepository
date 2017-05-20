@@ -35,7 +35,7 @@ namespace Service.Home
         }
         public List<ViewModel.Home.TopicViewModel> GetTop10Topics()
         {
-            return ViewModelMapper<TopicViewModel, Topic>.MapObjects(_topicRepository.GetAll().OrderBy(x => x.NoOfLikes).Take(10).ToList(), _userRepository);
+            return ViewModelMapper<TopicViewModel, Topic>.MapObjects(_topicRepository.GetAll().OrderByDescending(x => x.NoOfLikes).Take(10).ToList(), _userRepository);
         }
 
         private CategoryViewModel CategoryViewModelFromModel(Category category)
@@ -79,12 +79,12 @@ namespace Service.Home
 
         public List<LastestTopicViewModel> GetLastestTopics()
         {
-            return ViewModelMapper<LastestTopicViewModel, Topic>.MapObjects(_topicRepository.GetAll().OrderBy(x => x.CreatedDate).Take(4).ToList(), _userRepository);
+            return ViewModelMapper<LastestTopicViewModel, Topic>.MapObjects(_topicRepository.GetAll().OrderByDescending(x => x.CreatedDate).Take(4).ToList(), _userRepository);
         }
 
         public List<SellerViewModel> GetTopBonuSellerViewModels()
         {
-            return ViewModelMapper<SellerViewModel, ApplicationUser>.MapObjects(_userRepository.GetMulti(x => x.Bonus != 0).OrderBy(x => x.Bonus).Take(10).ToList());
+            return ViewModelMapper<SellerViewModel, ApplicationUser>.MapObjects(_userRepository.GetMulti(x => x.Bonus != 0).OrderByDescending(x => x.Bonus).Take(10).ToList());
         }
     }
 }

@@ -204,12 +204,15 @@
     <Compile Include="Controllers\api\TopicApiController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CategoryListController.cs" />
     <Compile Include="Controllers\GetInfoFacebookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\RegisterFacebookAccountController.cs" />
     <Compile Include="Controllers\TopicController.cs" />
+    <Compile Include="Controllers\TopicDetailController.cs" />
+    <Compile Include="Controllers\TopicListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -227,30 +230,12 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\style.css" />
-    <Content Include="css\basics.css" />
-    <Content Include="css\basics.min.css" />
-    <Content Include="css\bootstrap-select.min.css" />
-    <Content Include="css\category.css" />
-    <Content Include="css\css32da.css" />
-    <Content Include="css\css6d4d.css" />
-    <Content Include="css\custom.css" />
-    <Content Include="css\demo.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\font\fontawesome-webfont.svg" />
-    <Content Include="css\home.css" />
-    <Content Include="css\jquery.fullPage.css" />
-    <Content Include="css\lightbox.min.css" />
-    <Content Include="css\likedd.css" />
-    <Content Include="css\main.css" />
-    <Content Include="css\nemoji.css" />
     <Content Include="css\new\jquery-ui.css" />
     <Content Include="css\new\style.css" />
     <Content Include="css\style.css" />
-    <Content Include="css\style.min.css" />
-    <Content Include="css\twitter_core.bundle.css" />
-    <Content Include="css\twitter_more_1.bundle.css" />
-    <Content Include="css\twitter_more_2.bundle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -297,6 +282,7 @@
     <Content Include="js\category.js" />
     <Content Include="js\core.min.js" />
     <Content Include="js\demo.js" />
+    <Content Include="js\expand.js" />
     <Content Include="js\fltl.js" />
     <Content Include="js\forum_fn.min.js" />
     <Content Include="js\head.load.min.js" />
@@ -377,6 +363,9 @@
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Topic\Index.cshtml" />
     <Content Include="Views\HomePage\Index.cshtml" />
+    <Content Include="Views\CategoryList\Index.cshtml" />
+    <Content Include="Views\TopicList\Index.cshtml" />
+    <Content Include="Views\TopicDetail\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
