@@ -17,6 +17,7 @@ namespace Repository
 
     public class LanguageRepository : ILanguageRepository
     {
+
         #region Properties
 
         private WCDbContext dataContext;

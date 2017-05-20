@@ -1,115 +1,123 @@
-﻿@{
+﻿@using ViewModel.Home
+@{
     Layout = "~/Views/Shared/WebLayout.cshtml";
+    List<CategoryViewModel> categories = ViewBag.Categories;
+    List<TopicViewModel> top10Topics = ViewBag.Top10Topics;
+    List<LastestTopicViewModel> lastestTopics = ViewBag.LastestTopics;
+    List<SellerViewModel> sellerViewModels = ViewBag.TopSellers;
 }
 
+<div class="root-category">
 
-<section class="section-page">
-    <div id="rtblock" class="container">
-        <div class="row text-center" id="fltl">
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-post">
-                    <div class="blog-meta">
-                        <time datetime="2017-04-29" class="entry-date">
-                            <span class="day">29</span>
-                            <span class="month">Apr</span>
-                        </time>
-                    </div>
-                    <div class="title">
-                        <header class="entry-header">
-                            <h6 class="inverse-font"><a title="" href="./viewtopic.php?f=17&amp;t=12">Normal Announcement example - note the font icon status</a></h6>
-                            <div class="entry-meta">
-                                <span class="jp-views"><img src="//secure.gravatar.com/avatar/c11c45a882130d6f0ea476145a7e2d9a?s=100&amp;d=identicon" width="100" height="100" alt="User avatar" />&nbsp;&#45;&nbsp;By&nbsp;Ralph</span>
-                            </div>
-                        </header>
-                    </div>
-                    <div class="content-post">
-                        <p>wow</p>
-                    </div>
-                    <div class="panel-bottom">
-                        <a title="" class="btn btn-xs btn-block" href="./viewtopic.php?p=421#p421">READ MORE</a>
-                    </div>
+    @foreach (var category in categories)
+    {
+        <div class="root-category-item grow">
+            <img class="img-category-root" src="@category.Image" />
+            <div class="info-category-group">
+                <div style="background: @category.HexColor;" class="category-item-title-background">
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-post">
-                    <div class="blog-meta">
-                        <time datetime="2017-04-29" class="entry-date">
-                            <span class="day">29</span>
-                            <span class="month">Apr</span>
-                        </time>
-                    </div>
-                    <div class="title">
-                        <header class="entry-header">
-                            <h6 class="inverse-font"><a title="" href="./viewtopic.php?f=17&amp;t=85">BBemoji - Custom extension to support emoji with autoselect for phpBB 3.1</a></h6>
-                            <div class="entry-meta">
-                                <span class="jp-views"><img src="//secure.gravatar.com/avatar/c11c45a882130d6f0ea476145a7e2d9a?s=100&amp;d=identicon" width="100" height="100" alt="User avatar" />&nbsp;&#45;&nbsp;By&nbsp;Ralph</span>
-                            </div>
-                        </header>
-                    </div>
-                    <div class="content-post">
-                        <p> Check this out start typing an emojy for example &#91;&hellip;&#93;</p>
-                    </div>
-                    <div class="panel-bottom">
-                        <a title="" class="btn btn-xs btn-block" href="./viewtopic.php?p=419#p419">READ MORE</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-post">
-                    <div class="blog-meta">
-                        <time datetime="2017-04-28" class="entry-date">
-                            <span class="day">28</span>
-                            <span class="month">Apr</span>
-                        </time>
-                    </div>
-                    <div class="title">
-                        <header class="entry-header">
-                            <h6 class="inverse-font"><a title="" href="./viewtopic.php?f=17&amp;t=111">This is my first post</a></h6>
-                            <div class="entry-meta">
-                                <span class="jp-views"><img src="//secure.gravatar.com/avatar/d9089aba7a32dc6d225257f88328ed4b?s=100&amp;d=identicon" width="100" height="100" alt="User avatar" />&nbsp;&#45;&nbsp;By&nbsp;XwXCatwomanXwX</span>
-                            </div>
-                        </header>
-                    </div>
-                    <div class="content-post">
-                        <p>This exciting, I really like this interface.</p>
-                    </div>
-                    <div class="panel-bottom">
-                        <a title="" class="btn btn-xs btn-block" href="./viewtopic.php?p=418#p418">READ MORE</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-post">
-                    <div class="blog-meta">
-                        <time datetime="2017-04-10" class="entry-date">
-                            <span class="day">10</span>
-                            <span class="month">Apr</span>
-                        </time>
-                    </div>
-                    <div class="title">
-                        <header class="entry-header">
-                            <h6 class="inverse-font"><a title="" href="./viewtopic.php?f=17&amp;t=110">Bu bir test başlığıdır</a></h6>
-                            <div class="entry-meta">
-                                <span class="jp-views"><img src="//secure.gravatar.com/avatar/1d510a88d04eb825e2741c5642ec31e9?s=100&amp;d=identicon" width="100" height="100" alt="User avatar" />&nbsp;&#45;&nbsp;By&nbsp;brandt</span>
-                            </div>
-                        </header>
-                    </div>
-                    <div class="content-post">
-                        <p>
-                            http://i.hizliresim.com/9QYjNZ.png
-                            Bu bir testt&#91;&hellip;&#93;
-                        </p>
-                    </div>
-                    <div class="panel-bottom">
-                        <a title="" class="btn btn-xs btn-block" href="./viewtopic.php?p=414#p414">READ MORE</a>
-                    </div>
+                <div class="category-item-text">
+                    <div class="category-item-title">@category.Display</div>
+                    <div class="category-item-decription">@category.Decription</div>
                 </div>
             </div>
         </div>
-        <div id="rtbtnrow" class="row text-center">
-            <div class="col-md-12">
-                <a class="rtbutton btn btn-default btn-block btn-lazy" href="javascript:void(0)">VIEW MORE TOPICS</a>
+    }
+</div>
+
+<div class="additional-infomation">
+    <div class="featured-topic">
+        <div class="featured-topic-title title-item">Bài viết nổi bật</div>
+        <div class="featured-topic-items">
+
+            @foreach (var topic in top10Topics)
+            {
+                <div class="topic-item">
+                    <div class="author-avatar" style="background: url(@topic.Avatar);background-repeat: no-repeat; background-size: contain;"></div>
+                    <div class="topic-content">
+                        <div class="topic-left-group">
+                            <div class="topic-header">
+                                @topic.TopicName
+                            </div>
+                        </div>
+                        
+                        <div class="statistics">
+                            
+                            <div class="author-topic">
+                                @topic.CreatedBy
+                            </div>
+
+                            <div class="date-create-topic">
+                                @topic.CreateDateStr
+                            </div>
+
+                            <div class="no-of-view-group statistics-item">
+                                <div class="no-of-view statistics-text">@topic.NoOfViews</div>
+                                <div class="no-of-view-icon statistics-icon"></div>
+                            </div>
+                            <div class="no-of-like-group statistics-item">
+                                <div class="no-of-like statistics-text">@topic.NoOfLikes</div>
+                                <div class="no-of-like-icon statistics-icon"></div>
+                            </div>
+                            <div class="no-of-comment-group statistics-item">
+                                <div class="no-of-comment statistics-text">@topic.NoOfComments</div>
+                                <div class="no-of-comment-icon statistics-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+    <div class="right-content">
+        <div class="new-topics">
+            <div class="new-topic-title title-item">
+                Bài đăng mới
+            </div>
+            <div class="new-topic-content">
+                
+                @foreach (var topic in lastestTopics)
+                {
+                    <div class="new-topic-item">
+                        <div style="background: url(@topic.Avatar);background-repeat: no-repeat; background-size: contain;" class="author-avatar"></div>
+                        <div class="topic-content">
+                            <div class="topic-left-group">
+                                <div class="topic-header">
+                                    @topic.TopicName
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+        <div class="outstanding-seller">
+
+            <div class="outstanding-seller-title title-item">
+                Người bán nổi bật
+            </div>
+
+            <div class="out-standing-seller-items">
+                
+                @foreach (var item in sellerViewModels)
+                {
+                    <div class="out-standing-seller-item">
+                        <div class="seller-avatar" style="background: url( @item.Avatar); background-size: contain; background-repeat: no-repeat;"></div>
+                        <div class="out-standing-content">
+                            <div class="seller-name">
+                                @item.Name
+                            </div>
+                            <div class="seller-bonus">
+                                @item.Bonus
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     </div>
-</section>
+</div>

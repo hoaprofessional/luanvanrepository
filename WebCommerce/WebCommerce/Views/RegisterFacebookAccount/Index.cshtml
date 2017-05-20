@@ -57,6 +57,22 @@
         }
 
         }
+        </style>
+    
+    
+    
+    
+    <style>
+        .avatar-facebook-register {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100px;
+            height: 100px;
+        }
+        img#avatar {
+            width: 100%;
+            height: 100%;
+        }
     </style>
     <script>
         var boardurl = '/';
@@ -151,10 +167,18 @@
                                     <span class="fa fa-envelope login-form-icon"></span>
                                 </div>
                             </div>
+                            
+                            <div class="form-group">
+                                <div class="avatar-facebook-register">
+                                    <img class="img-avatar-register" id="avatar" src="" />
+                                </div>
+                                
+                            </div>
 
                             <div class="checkbox pull-right">
                                 <label for="autologin"><input type="checkbox" name="autologin" id="autologin">Keep me logged in</label>
                             </div>
+                            @*<button type="submit" class="btn btn-primary disabled" id="buttonRegister" name="login" value="Login" data-loading-text="Logging-in...<i class='fa-spin fa fa-spinner fa-lg'></i>" disabled="disabled">Logging-in...<i class="fa-spin fa fa-spinner fa-lg"></i></button>*@
                             <button type="submit" class="btn btn-primary" id="buttonRegister" name="login" value="Login" data-loading-text="Logging-in...<i class='fa-spin fa fa-spinner fa-lg'></i>">Register</button>
                             <input type="hidden" name="redirect" value="./index.php?" />
 
@@ -299,10 +323,9 @@
     <script type="text/javascript" src="~/js/resizer.js?assets_version=55"></script>
     <script type="text/javascript" src="~/js/lightbox.min.js?assets_version=55"></script>
     <script src="~/js/jquery-1.10.2.min.js"></script>
-    <script src="~/js/authorize/facebook.js"></script>
     <script>
         $('#content-forum').css('margin-top', ($($('#top')).outerHeight() + 20) + 'px');
     </script>
-
+    <script src="~/js/authorize/facebook.js"></script>
 </body>
 </html>

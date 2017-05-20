@@ -1,26 +1,27 @@
-﻿using Model;
-using Repository;
-using Service;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Web;
+﻿using Service;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity.EntityFramework;
+using Service.Home;
 
 namespace WebCommerce.Controllers
 {
     public class HomeController : BaseController
     {
-        public HomeController(IUserService userService) : base(userService)
+        private readonly IHomeService _homeService;
+
+        public HomeController(IHomeService homeService)
         {
+            _homeService = homeService;
         }
-        public override async Task<ActionResult> Index()
+
+
+        public async Task<ActionResult> Index()
         {
-            ActionResult view = await base.Index();
+            ActionResult view = await base.CreateViewForUser();
+            ViewBag.Categories = _homeService.GetCategories();
+            ViewBag.Top10Topics = _homeService.GetTop10Topics();
+            ViewBag.LastestTopics = _homeService.GetLastestTopics();
+            ViewBag.TopSellers = _homeService.GetTopBonuSellerViewModels();
             return view;
         }
 

@@ -200,11 +200,16 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\api\FacebookInfoController.cs" />
+    <Compile Include="Controllers\api\MenuApiController.cs" />
+    <Compile Include="Controllers\api\TopicApiController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\GetInfoFacebookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\RegisterFacebookAccountController.cs" />
+    <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -221,9 +226,11 @@
     <Content Include="Content\bootstrap-table.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\style.css" />
     <Content Include="css\basics.css" />
     <Content Include="css\basics.min.css" />
     <Content Include="css\bootstrap-select.min.css" />
+    <Content Include="css\category.css" />
     <Content Include="css\css32da.css" />
     <Content Include="css\css6d4d.css" />
     <Content Include="css\custom.css" />
@@ -231,10 +238,15 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\font\fontawesome-webfont.svg" />
+    <Content Include="css\home.css" />
+    <Content Include="css\jquery.fullPage.css" />
     <Content Include="css\lightbox.min.css" />
     <Content Include="css\likedd.css" />
     <Content Include="css\main.css" />
     <Content Include="css\nemoji.css" />
+    <Content Include="css\new\jquery-ui.css" />
+    <Content Include="css\new\style.css" />
+    <Content Include="css\style.css" />
     <Content Include="css\style.min.css" />
     <Content Include="css\twitter_core.bundle.css" />
     <Content Include="css\twitter_more_1.bundle.css" />
@@ -282,12 +294,17 @@
     <Content Include="js\ajax.min.js" />
     <Content Include="js\authorize\facebook.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\category.js" />
     <Content Include="js\core.min.js" />
     <Content Include="js\demo.js" />
     <Content Include="js\fltl.js" />
     <Content Include="js\forum_fn.min.js" />
     <Content Include="js\head.load.min.js" />
     <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-1.12.4.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.fullPage.min.js" />
+    <Content Include="js\layout\render.js" />
     <Content Include="js\layout\web_layout.js" />
     <Content Include="js\lightbox.min.js" />
     <Content Include="js\resizer.js" />
@@ -357,6 +374,9 @@
     <Content Include="Views\GetInfoFacebook\Index.cshtml" />
     <Content Include="Views\Shared\WebLayout.cshtml" />
     <Content Include="Views\RegisterFacebookAccount\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Topic\Index.cshtml" />
+    <Content Include="Views\HomePage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
@@ -374,6 +394,10 @@
     <ProjectReference Include="..\Service\Service.csproj">
       <Project>{6e41a7bf-aa5b-4536-a3f2-8831a4fe1cca}</Project>
       <Name>Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Validate\Validate.csproj">
+      <Project>{1C22881A-C97C-4292-9072-903DF5665DDB}</Project>
+      <Name>Validate</Name>
     </ProjectReference>
     <ProjectReference Include="..\ViewModel\ViewModel.csproj">
       <Project>{76c2b9d8-1cd9-4046-811d-666aa18bcdee}</Project>

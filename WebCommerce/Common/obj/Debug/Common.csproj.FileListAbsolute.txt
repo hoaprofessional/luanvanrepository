@@ -1,0 +1,10 @@
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\bin\Debug\Common.dll
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\bin\Debug\Common.pdb
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\bin\Debug\vi\Common.resources.dll
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\obj\Debug\Common.App_LocalResources.GlobalRes.resources
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\obj\Debug\Common.App_LocalResources.GlobalRes.vi.resources
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\obj\Debug\Common.csproj.GenerateResource.Cache
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\obj\Debug\vi\Common.resources.dll
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\obj\Debug\Common.dll
+C:\Users\hung\Desktop\github\luanvanrepository\WebCommerce\Common\obj\Debug\Common.pdb

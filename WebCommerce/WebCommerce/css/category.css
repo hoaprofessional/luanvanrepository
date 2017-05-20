@@ -1,0 +1,122 @@
+﻿.forumtitle {
+    margin-left: 15px !important;
+}
+
+span.description {
+    margin-left: 15px !important;
+}
+
+.category-item {
+    width: 33%;
+    display: inline-block;
+    position: relative;
+    height: 87px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.category-decription {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+@media (max-width: 770px) {
+    .category-item {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        height: 150px;
+        margin-bottom: 35px;
+    }
+}
+
+.category-item-title {
+    font-weight: 900;
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #de960e;
+}
+
+.category-item-decription {
+    font-style: italic;
+    color: #7e7e86;
+    font-size: 19px;
+}
+
+.category-image {
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.content-category-item {
+    height: 90%;
+    padding-top: 5%;
+    /* padding-left: 5%; */
+}
+
+.icon-category-parent {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 80%;
+    display: inline-block;
+}
+
+.category-header {
+    height: 80%;
+}
+
+.category-title {
+    display: inline-block;
+    /* position: absolute; */
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+th.large110.footable-visible {
+    display: -webkit-box;
+    margin: auto;
+}
+
+span.stats-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+.category-row {
+    cursor: pointer;
+}
+
+.content-info {
+    width: 70%;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.featured-topic {
+    width: 29%;
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    top: 0;
+}
+
+td.expand.footable-visible.footable-first-column {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+div#feature-header-fixed {
+    background-color: #e1e2e4;
+    color: #555;
+}
+
+th.footable-visible.footable-first-column {
+    padding-left: 13px!important;
+}

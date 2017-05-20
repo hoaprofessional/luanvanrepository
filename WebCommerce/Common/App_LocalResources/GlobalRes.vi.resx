@@ -117,22 +117,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CategoryAppliances" xml:space="preserve">
+    <value>Hàng gia dụng</value>
+  </data>
+  <data name="CategoryBuy" xml:space="preserve">
+    <value>Thông tin bán hàng</value>
+  </data>
+  <data name="CategoryDecriptionAppliances" xml:space="preserve">
+    <value>Những bài viết về mặt hàng gia dụng</value>
+  </data>
+  <data name="CategoryDecriptionBuy" xml:space="preserve">
+    <value>Những bài viết bán hàng</value>
+  </data>
+  <data name="CategoryDecriptionElectronic" xml:space="preserve">
+    <value>Những bài viết về mặt hàng điện tử</value>
+  </data>
+  <data name="CategoryDecriptionForeignInfomation" xml:space="preserve">
+    <value>Những bài viết thông tin xuất ngoại</value>
+  </data>
+  <data name="CategoryDecriptionRoot" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CategoryDecriptionSell" xml:space="preserve">
+    <value>Những bài viết mua hàng</value>
+  </data>
+  <data name="CategoryElectronic" xml:space="preserve">
+    <value>Điện tử</value>
+  </data>
+  <data name="CategoryForeignInfomation" xml:space="preserve">
+    <value>Thông tin xuất ngoại</value>
+  </data>
+  <data name="CategoryRoot" xml:space="preserve">
+    <value>Danh mục</value>
+  </data>
+  <data name="CategorySell" xml:space="preserve">
+    <value>Thông tin mua hàng</value>
+  </data>
+  <data name="CatParentNotValid" xml:space="preserve">
+    <value>Danh mục không hợp lệ</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>Trang chủ</value>
     <comment>Tiêu đề trang chủ</comment>
-  </data>
-  <data name="Id token facebook invalid" xml:space="preserve">
-    <value>Mã truy cập facebook không hợp lệ</value>
   </data>
   <data name="InvalidLoginInfomation" xml:space="preserve">
     <value>Sai tài khoản hoặc mật khẩu</value>
     <comment>Thông báo khi đăng ký sai thông tin</comment>
   </data>
+  <data name="LastPost" xml:space="preserve">
+    <value>Đăng lần cuối</value>
+  </data>
   <data name="LoginSuccess" xml:space="preserve">
     <value>Đăng nhập thành công</value>
   </data>
+  <data name="MenuForum" xml:space="preserve">
+    <value>Forum</value>
+  </data>
+  <data name="MenuHome" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="MenuTopic" xml:space="preserve">
+    <value>Chủ đề</value>
+  </data>
+  <data name="MenuUnReadTopic" xml:space="preserve">
+    <value>Bài viết chưa đọc</value>
+  </data>
   <data name="MessageIdFacebookNull" xml:space="preserve">
     <value>Id facebook không hợp lệ</value>
+  </data>
+  <data name="MessageIdTokenNull" xml:space="preserve">
+    <value>Mã truy cập facebook không hợp lệ</value>
   </data>
   <data name="NoUserExists" xml:space="preserve">
     <value>Không tồn tại user</value>
@@ -140,7 +197,31 @@
   <data name="RegisterSuccess" xml:space="preserve">
     <value>Đăng nhập thành công</value>
   </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Thống kê</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
   <data name="UserAlreadyExists" xml:space="preserve">
     <value>Đã tồn tại user</value>
+  </data>
+  <data name="AdvancedSearch" xml:space="preserve">
+    <value>Tìm kiếm nâng cao</value>
+  </data>
+  <data name="SearchButtonTitle" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>Nhập thông tin cần tìm kiếm</value>
+  </data>
+  <data name="Top10Topics" xml:space="preserve">
+    <value>Bài viết nổi bật</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>Đăng bởi</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>Xem topic</value>
   </data>
 </root>

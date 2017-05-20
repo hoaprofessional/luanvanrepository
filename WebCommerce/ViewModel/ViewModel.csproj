@@ -63,7 +63,14 @@
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="Facebook\FacebookDataViewModel.cs" />
     <Compile Include="Facebook\FacebookParameterViewModel.cs" />
+    <Compile Include="Home\CategoryViewModel.cs" />
+    <Compile Include="Home\LastestTopicViewModel.cs" />
+    <Compile Include="Home\SellerViewModel.cs" />
+    <Compile Include="Home\TopicViewModel.cs" />
+    <Compile Include="MenuViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Topic\TopicInsertViewModel.cs" />
+    <Compile Include="Topic\TopicListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
@@ -74,11 +81,16 @@
       <Project>{f8b8e34c-07d2-4828-b4bc-a5353ef8396a}</Project>
       <Name>Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{6E44CCF4-08D0-4F8E-8987-CC6FE381B282}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

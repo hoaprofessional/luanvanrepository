@@ -9,6 +9,7 @@ using Service;
 using System.Reflection;
 using System.Web.Http;
 using System.Web.Mvc;
+using Validate;
 using WebCommerceDbContext;
 
 [assembly: OwinStartupAttribute(typeof(WebCommerce.Startup))]
@@ -51,6 +52,11 @@ namespace WebCommerce
             builder.RegisterAssemblyTypes(typeof(UserService).Assembly)
                .Where(t => t.Name.EndsWith("Service"))
                .AsImplementedInterfaces().InstancePerRequest();
+
+            //// Validate
+            builder.RegisterAssemblyTypes(typeof(TopicFieldValidate).Assembly)
+                .Where(t => t.Name.EndsWith("Validate"))
+                .AsImplementedInterfaces().InstancePerRequest();
 
             Autofac.IContainer container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

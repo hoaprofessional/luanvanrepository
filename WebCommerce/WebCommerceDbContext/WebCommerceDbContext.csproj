@@ -56,6 +56,70 @@
     <Compile Include="Migrations\201705121149234_dsds.Designer.cs">
       <DependentUpon>201705121149234_dsds.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705150121363_AddMenu.cs" />
+    <Compile Include="Migrations\201705150121363_AddMenu.Designer.cs">
+      <DependentUpon>201705150121363_AddMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705150122302_AddMenu1.cs" />
+    <Compile Include="Migrations\201705150122302_AddMenu1.Designer.cs">
+      <DependentUpon>201705150122302_AddMenu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705150202458_AddMenu2.cs" />
+    <Compile Include="Migrations\201705150202458_AddMenu2.Designer.cs">
+      <DependentUpon>201705150202458_AddMenu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705150243542_AddMenu3.cs" />
+    <Compile Include="Migrations\201705150243542_AddMenu3.Designer.cs">
+      <DependentUpon>201705150243542_AddMenu3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705150332486_AddTopic.cs" />
+    <Compile Include="Migrations\201705150332486_AddTopic.Designer.cs">
+      <DependentUpon>201705150332486_AddTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705150333389_AddTopic1.cs" />
+    <Compile Include="Migrations\201705150333389_AddTopic1.Designer.cs">
+      <DependentUpon>201705150333389_AddTopic1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705150727085_AddTopic2.cs" />
+    <Compile Include="Migrations\201705150727085_AddTopic2.Designer.cs">
+      <DependentUpon>201705150727085_AddTopic2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170421278_AddTopic3.cs" />
+    <Compile Include="Migrations\201705170421278_AddTopic3.Designer.cs">
+      <DependentUpon>201705170421278_AddTopic3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170423530_AddTopic4.cs" />
+    <Compile Include="Migrations\201705170423530_AddTopic4.Designer.cs">
+      <DependentUpon>201705170423530_AddTopic4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170453052_AddTopic5.cs" />
+    <Compile Include="Migrations\201705170453052_AddTopic5.Designer.cs">
+      <DependentUpon>201705170453052_AddTopic5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170917520_Add-LastComment.cs" />
+    <Compile Include="Migrations\201705170917520_Add-LastComment.Designer.cs">
+      <DependentUpon>201705170917520_Add-LastComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705200430524_AddAuthorAvatar.cs" />
+    <Compile Include="Migrations\201705200430524_AddAuthorAvatar.Designer.cs">
+      <DependentUpon>201705200430524_AddAuthorAvatar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705200439330_AddAuthorAvatar1.cs" />
+    <Compile Include="Migrations\201705200439330_AddAuthorAvatar1.Designer.cs">
+      <DependentUpon>201705200439330_AddAuthorAvatar1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705200447145_AddAuthorAvatar2.cs" />
+    <Compile Include="Migrations\201705200447145_AddAuthorAvatar2.Designer.cs">
+      <DependentUpon>201705200447145_AddAuthorAvatar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705200448498_AddAuthorAvatar3.cs" />
+    <Compile Include="Migrations\201705200448498_AddAuthorAvatar3.Designer.cs">
+      <DependentUpon>201705200448498_AddAuthorAvatar3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705200504166_AddAuthorAvatar4.cs" />
+    <Compile Include="Migrations\201705200504166_AddAuthorAvatar4.Designer.cs">
+      <DependentUpon>201705200504166_AddAuthorAvatar4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="WCDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +137,54 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705121149234_dsds.resx">
       <DependentUpon>201705121149234_dsds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150121363_AddMenu.resx">
+      <DependentUpon>201705150121363_AddMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150122302_AddMenu1.resx">
+      <DependentUpon>201705150122302_AddMenu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150202458_AddMenu2.resx">
+      <DependentUpon>201705150202458_AddMenu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150243542_AddMenu3.resx">
+      <DependentUpon>201705150243542_AddMenu3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150332486_AddTopic.resx">
+      <DependentUpon>201705150332486_AddTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150333389_AddTopic1.resx">
+      <DependentUpon>201705150333389_AddTopic1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150727085_AddTopic2.resx">
+      <DependentUpon>201705150727085_AddTopic2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170421278_AddTopic3.resx">
+      <DependentUpon>201705170421278_AddTopic3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170423530_AddTopic4.resx">
+      <DependentUpon>201705170423530_AddTopic4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170453052_AddTopic5.resx">
+      <DependentUpon>201705170453052_AddTopic5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170917520_Add-LastComment.resx">
+      <DependentUpon>201705170917520_Add-LastComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705200430524_AddAuthorAvatar.resx">
+      <DependentUpon>201705200430524_AddAuthorAvatar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705200439330_AddAuthorAvatar1.resx">
+      <DependentUpon>201705200439330_AddAuthorAvatar1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705200447145_AddAuthorAvatar2.resx">
+      <DependentUpon>201705200447145_AddAuthorAvatar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705200448498_AddAuthorAvatar3.resx">
+      <DependentUpon>201705200448498_AddAuthorAvatar3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705200504166_AddAuthorAvatar4.resx">
+      <DependentUpon>201705200504166_AddAuthorAvatar4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

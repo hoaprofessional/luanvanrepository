@@ -53,6 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="Home\HomeService.cs" />
+    <Compile Include="MenuService.cs" />
+    <Compile Include="TopicService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="LanguageService.cs" />
     <Compile Include="QlAuditableService.cs" />
@@ -60,6 +64,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{815f4ddc-558b-4d1a-8208-e4c2aadeee68}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{f8b8e34c-07d2-4828-b4bc-a5353ef8396a}</Project>
       <Name>Model</Name>
@@ -67,6 +75,10 @@
     <ProjectReference Include="..\Repository\Repository.csproj">
       <Project>{6e44ccf4-08d0-4f8e-8987-cc6fe381b282}</Project>
       <Name>Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\ViewModel.csproj">
+      <Project>{76c2b9d8-1cd9-4046-811d-666aa18bcdee}</Project>
+      <Name>ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

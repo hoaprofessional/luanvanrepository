@@ -21,18 +21,16 @@ namespace WebCommerce.Controllers
 {
     public class BaseController : Controller
     {
-        IUserService _userService;
-        public BaseController(IUserService userService)
+        public BaseController()
         {
-            _userService = userService;
             UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
         }
         public UserManager<ApplicationUser> UserManager { get; private set; }
         //
         // GET: /Base/
-        public virtual async Task<ActionResult> Index()
+        public async Task<ActionResult> CreateViewForUser()
         {
-            var loginedUser = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+            ApplicationUser loginedUser = await UserManager.FindByIdAsync(User.Identity.GetUserId());
             ViewBag.Title = GlobalRes.HomePageTitle;
             ViewBag.LoginedUser = loginedUser;
             return View();

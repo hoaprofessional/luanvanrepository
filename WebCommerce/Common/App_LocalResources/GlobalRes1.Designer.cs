@@ -61,6 +61,141 @@ namespace Common.App_LocalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Advanced search.
+        /// </summary>
+        public static string AdvancedSearch {
+            get {
+                return ResourceManager.GetString("AdvancedSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to by.
+        /// </summary>
+        public static string By {
+            get {
+                return ResourceManager.GetString("By", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Appliances.
+        /// </summary>
+        public static string CategoryAppliances {
+            get {
+                return ResourceManager.GetString("CategoryAppliances", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buy.
+        /// </summary>
+        public static string CategoryBuy {
+            get {
+                return ResourceManager.GetString("CategoryBuy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Appliances infomation.
+        /// </summary>
+        public static string CategoryDecriptionAppliances {
+            get {
+                return ResourceManager.GetString("CategoryDecriptionAppliances", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buy infomation.
+        /// </summary>
+        public static string CategoryDecriptionBuy {
+            get {
+                return ResourceManager.GetString("CategoryDecriptionBuy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Electronic infomation.
+        /// </summary>
+        public static string CategoryDecriptionElectronic {
+            get {
+                return ResourceManager.GetString("CategoryDecriptionElectronic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foreign infomation.
+        /// </summary>
+        public static string CategoryDecriptionForeignInfomation {
+            get {
+                return ResourceManager.GetString("CategoryDecriptionForeignInfomation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        public static string CategoryDecriptionRoot {
+            get {
+                return ResourceManager.GetString("CategoryDecriptionRoot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sell infomation.
+        /// </summary>
+        public static string CategoryDecriptionSell {
+            get {
+                return ResourceManager.GetString("CategoryDecriptionSell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Electronic.
+        /// </summary>
+        public static string CategoryElectronic {
+            get {
+                return ResourceManager.GetString("CategoryElectronic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foreign infomation.
+        /// </summary>
+        public static string CategoryForeignInfomation {
+            get {
+                return ResourceManager.GetString("CategoryForeignInfomation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        public static string CategoryRoot {
+            get {
+                return ResourceManager.GetString("CategoryRoot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sell.
+        /// </summary>
+        public static string CategorySell {
+            get {
+                return ResourceManager.GetString("CategorySell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Category parent not valid.
+        /// </summary>
+        public static string CatParentNotValid {
+            get {
+                return ResourceManager.GetString("CatParentNotValid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string HomePageTitle {
@@ -79,11 +214,56 @@ namespace Common.App_LocalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Last post.
+        /// </summary>
+        public static string LastPost {
+            get {
+                return ResourceManager.GetString("LastPost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login success.
         /// </summary>
         public static string LoginSuccess {
             get {
                 return ResourceManager.GetString("LoginSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forum.
+        /// </summary>
+        public static string MenuForum {
+            get {
+                return ResourceManager.GetString("MenuForum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string MenuHome {
+            get {
+                return ResourceManager.GetString("MenuHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Topic.
+        /// </summary>
+        public static string MenuTopic {
+            get {
+                return ResourceManager.GetString("MenuTopic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unreaded Topic.
+        /// </summary>
+        public static string MenuUnReadTopic {
+            get {
+                return ResourceManager.GetString("MenuUnReadTopic", resourceCulture);
             }
         }
         
@@ -115,11 +295,65 @@ namespace Common.App_LocalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Read more.
+        /// </summary>
+        public static string ReadMore {
+            get {
+                return ResourceManager.GetString("ReadMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register success.
         /// </summary>
         public static string RegisterSuccess {
             get {
                 return ResourceManager.GetString("RegisterSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go.
+        /// </summary>
+        public static string SearchButtonTitle {
+            get {
+                return ResourceManager.GetString("SearchButtonTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string SearchLabel {
+            get {
+                return ResourceManager.GetString("SearchLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Statistics.
+        /// </summary>
+        public static string Statistics {
+            get {
+                return ResourceManager.GetString("Statistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Featured topics.
+        /// </summary>
+        public static string Top10Topics {
+            get {
+                return ResourceManager.GetString("Top10Topics", resourceCulture);
             }
         }
         

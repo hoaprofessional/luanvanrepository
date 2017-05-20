@@ -19,8 +19,11 @@ namespace WebCommerceDbContext
         #region Table in database
 
         //1_ThemBang: st2. Thêm DbSet<Lớp mới tạo ở bước 1> vào đây
-        // Ví dụ ở đây là public DbSet<Demo> Demoes { set; get; }
+        // Ví dụ ở đây là public DbSet<LanguageCode> LanguageCodes { set; get; }
         public DbSet<LanguageCode> LanguageCodes { set; get; }
+        public DbSet<Menu> Menus { set; get; }
+        public DbSet<Topic> Topics { set; get; }
+        public DbSet<Category> Categories { set; get; }
 
         #endregion
         public static WCDbContext Create()
@@ -36,11 +39,11 @@ namespace WebCommerceDbContext
             builder.Entity<IdentityUserClaim>().HasKey(i => i.UserId).ToTable("AspNetUserClaims");
             builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId }).ToTable("AspNetUserRoles");
 
-            //1_ThemBang: st3. Thêm đoạn code tương tự như sau để thêm store procedure
-    //        builder.Entity<PhanSo>().MapToStoredProcedures(s => s.Insert(u => u.HasName("InsertPhanSo", "dbo"))
-    //                                               .Update(u => u.HasName("UpdatePhanSo", "dbo"))
-    //                                               .Delete(u => u.HasName("DeletePhanSo", "dbo"))
-    //);
+           // 1_ThemBang: st3. Thêm đoạn code tương tự như sau để thêm store procedure
+            builder.Entity<Topic>().MapToStoredProcedures(s => s.Insert(u => u.HasName("InsertTopic", "dbo"))
+                                                   .Update(u => u.HasName("UpdateTopic", "dbo"))
+                                                   .Delete(u => u.HasName("DeleteTopic", "dbo"))
+    );
 
 
             //st3. -- END

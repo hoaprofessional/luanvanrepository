@@ -53,15 +53,24 @@ function findUser(foreignToken, facebookTokenId, successCallback, failedCallback
     });
 }
 
-function register(foreignToken, facebookTokenId, email, name, successCallback, failedCallback) {
+function register(foreignToken, facebookTokenId, content, successCallback, failedCallback) {
+
+    $.post("/RegisterFacebookAccount/ComitAvatar",
+        {
+            avatar: content.image,
+            filename: $('#avatar').attr('name') + ".png"
+        });
+
     var data = ["__RequestVerificationToken=",
             foreignToken,
             "&FacebookTokenId=",
             facebookTokenId,
             "&Email=",
-            email,
+        content.email,
             "&Name=",
-            name
+        content.name,
+            "&Avatar=",
+        $('#avatar').attr('name') + ".png"
     ].join('');
 
     $.ajax({
@@ -120,8 +129,14 @@ function getForeignToken() {
 
 
 function onDataFacebookLoaded(data) {
+    //TODO add data load complete here
     $('#txtName').val(data.name);
     $('#txtEmail').val(data.email);
+    $('#avatar').attr('src', data.picture.data.url );
+    $('#avatar').attr('name', data.id);
+    $('#buttonRegister').empty();
+    $('#buttonRegister').append("Register");
+    $('#buttonRegister').prop("disabled", false);
 }
 
 function getDataFromFacebookTokenId() {
@@ -147,17 +162,25 @@ function getDataFromFacebookTokenId() {
 
 }
 
+function loading() {
+    $('#buttonRegister').empty();
+    $('#buttonRegister').append("Waiting data...<i class='fa-spin fa fa-spinner fa-lg'>");
+    $('#buttonRegister').prop("disabled", true);
+}
 
 $(document).ready(function () {
+    loading();
     getDataFromFacebookTokenId();
 });
 
 
 $('#buttonRegister').click(function (e) {
     var idToken = getFacebookTokenId();
-    var name = $('#txtName').val();
-    var email = $('#txtEmail').val();
-    register(getForeignToken(), idToken, email, name);
+    var content = {
+        name: $('#txtName').val(), email: $('#txtEmail').val(),
+        image : $('#avatar').attr('src')
+    };
+    register(getForeignToken(), idToken, content);
 });
 
 

@@ -1,0 +1,146 @@
+﻿@{
+    Layout = "~/Views/Shared/WebLayout.cshtml";
+    ViewModel.CategoryViewModel category = ViewBag.Category;
+}
+
+@using Common.App_LocalResources;
+
+
+<link href="~/css/category.css" rel="stylesheet" />
+
+<style>
+    .cat-id {
+        
+    }
+</style>
+
+<div class="category-item">
+    <a href="/Category?catId=@category.Content.Id" class="shadow-item make-it-slow">
+        <div class="content-category-item">
+            <img class="category-image" src="@category.Content.Image" />
+            <div class="category-decription">
+                <div class="category-item-title">
+                    @category.Display
+                </div>
+                <div class="category-item-decription">
+                    @category.Decription
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div style="display: block; padding-bottom: 30px;">
+
+    <div class="content-info">
+        <div style="margin-bottom: 0px !important;" class="panel panel-forum">
+            <div id="header" style="background-color: @category.Content.ColorTitleHex;" class="panel-heading">
+                <div class="category-header">
+                    <div class="icon-category-parent">
+                        <img id="image-title" class="category-image" src="@category.Content.Image" />
+                    </div>
+                    <div class="category-title">
+                        @category.Display
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-inner">
+                <table class="category-table footable table-striped table-primary table-hover default footable-loaded">
+                    <thead>
+                        <tr style="background: #c7cbd6;">
+                            <th data-class="expand" class="footable-visible footable-first-column" style="width: 85%">@GlobalRes.Title</th>
+                            <th class="large110 footable-visible" data-hide="phone">@GlobalRes.Statistics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in category.Childs)
+                        {
+                            <tr class="category-row">
+                                <td title="No unread posts" class="expand footable-visible footable-first-column">
+                                    <span class="footable-toggle"></span>
+                                    <span class="forum-image"><img src="@item.Content.Image" alt="No unread posts"></span>
+                                    <i class="row-icon-font-mini " title="No unread posts"></i>
+                                    <span class="desc-wrapper">
+                                        <a href="/" class="forumtitle" data-original-title="" title="">@item.Display</a><br>
+                                        <span class="description forumtitle">@item.Decription</span><br>
+                                    </span>
+                                    <div class="cat-id" style="display:none;">@item.Content.Id</div>
+                                </td>
+                                <td class="stats-col footable-visible">
+                                    <span class="stats-wrapper">
+                                        @item.Content.NoOfTopics &nbsp;Topics&nbsp;<br> @item.Content.NoOfLikes &nbsp;Likes
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="featured-topic">
+        <div class="panel panel-forum">
+            <div class="panel-heading" id="feature-header-fixed">
+                <div class="category-header">
+                    <div class="category-title">
+                        Những bài viết nổi bật
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-inner" id="feature-header-scroll" style="overflow: auto;">
+                <table class=" category-table footable table-striped table-primary table-hover default footable-loaded">
+                    <thead>
+                        <tr style="background: #c7cbd6;">
+                            <th data-class="expand" class="footable-visible footable-first-column" style="width: 85%; height: 0px; display: none;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in category.Childs)
+                        {
+                            <tr class="category-row">
+                                <td title="No unread posts" class="expand footable-visible footable-first-column">
+                                    <span class="footable-toggle"></span>
+                                    <span class="forum-image"><img src="@item.Content.Image" alt="No unread posts"></span>
+                                    <i class="row-icon-font-mini " title="No unread posts"></i>
+                                    @*<a class="btn-rss pull-right hidden-xs hidden-sm" title="" href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/feed.php?f=5" data-original-title="Feed - Password protected">
+                                <i class="fa fa-rss rss-color-forum"></i>
+                            </a>*@
+                                    <span class="desc-wrapper">
+                                        <a href="./viewforum.php?f=5&amp;sid=9981be11a3ca407f17828ab6d480b4b1" class="forumtitle" data-original-title="" title="">@item.Display</a><br>
+                                        <span class="description forumtitle">@item.Decription</span><br>
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+
+                        @foreach (var item in category.Childs)
+                        {
+                            <tr class="category-row">
+                                <td title="No unread posts" class="expand footable-visible footable-first-column">
+                                    <span class="footable-toggle"></span>
+                                    <span class="forum-image"><img src="@item.Content.Image" alt="No unread posts"></span>
+                                    <i class="row-icon-font-mini " title="No unread posts"></i>
+                                    @*<a class="btn-rss pull-right hidden-xs hidden-sm" title="" href="http://www.sitesplat.com/demo/phpBB3/FLATBOOTS/phpbb31/feed.php?f=5" data-original-title="Feed - Password protected">
+                                <i class="fa fa-rss rss-color-forum"></i>
+                            </a>*@
+                                    <span class="desc-wrapper">
+                                        <a href="./viewforum.php?f=5&amp;sid=9981be11a3ca407f17828ab6d480b4b1" class="forumtitle" data-original-title="" title="">@item.Display</a><br>
+                                        <span class="description forumtitle">@item.Decription</span><br>
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script src="~/js/category.js"></script>

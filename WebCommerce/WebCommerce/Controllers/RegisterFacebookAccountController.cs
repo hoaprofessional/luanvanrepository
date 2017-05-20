@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -29,7 +32,7 @@ namespace WebCommerce.Controllers
             }
         }
         String _password = "absdkjalds123123asdslkajd";
-        IUserService _userService;
+        readonly IUserService _userService;
         public RegisterFacebookAccountController(IUserService userService)
         {
             _userService = userService;
@@ -122,6 +125,32 @@ namespace WebCommerce.Controllers
             return Json(new {
             });
         }
+
+        [HttpPost]
+        public JsonResult ComitAvatar(string avatar,string filename)
+        {
+            try
+            {
+                using (WebClient client = new WebClient())
+                {
+                    client.DownloadFile(new Uri(avatar), Server.MapPath("~/Images") + "\\" + filename);
+                }
+                return Json(new
+                {
+                    result = "success"
+                });
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return Json(new
+                {
+                    result = "failed"
+                });
+            }
+            
+        }
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -142,8 +171,10 @@ namespace WebCommerce.Controllers
                     });
                 }
                 user = PropertyCopy.Copy<ApplicationUser, RegisterFacebookViewModel>(model);
+
                 user.UserName = info.id;
                 user.FacebookId = info.id;
+                user.Avatar = "/images/" + user.Avatar;
                 var result = await UserManager.CreateAsync(user, _password);
                 if (result.Succeeded)
                 {

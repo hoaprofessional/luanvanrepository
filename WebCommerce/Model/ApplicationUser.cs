@@ -1,14 +1,7 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model
 {
@@ -24,5 +17,7 @@ namespace Model
         public bool Status { set; get; }
         public String FacebookId { get; set; }
         public String Name { get; set; }
+        public String Avatar { get; set; }
+        public int Bonus { get; set; }
     }
 }

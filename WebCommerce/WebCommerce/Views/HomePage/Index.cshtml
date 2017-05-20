@@ -1,0 +1,561 @@
+﻿
+<link href="~/Content/style.css" rel="stylesheet" />
+<script src="~/js/jquery-1.10.2.min.js"></script>
+
+
+<body>
+    <div class="web-full">
+
+    <div id="user-profile" class="user-profile">
+        <div class="profile-bg"></div>
+        <img class="profile-avatar" src="/Images/avatar.jpg"/>
+        <div class="profile-item">
+            <div class="label-profile-item">
+                Tên đăng nhập :
+            </div>
+            <div class="label-profile-content">
+                Hùng Ask
+            </div>
+        </div>
+
+        <div class="profile-item">
+            <div class="label-profile-item">
+                Tình trạng :
+            </div>
+            <div class="label-profile-content">
+                Đang du lịch
+            </div>
+        </div>
+
+        <div class="profile-item">
+            <div class="label-profile-item">
+                Số điểm :
+            </div>
+            <div class="label-profile-content">
+                100
+            </div>
+        </div>
+    </div>
+
+        <div class="content">
+            <div class="header center-vertical">
+                <div class="web-name center-vertical">Bán hàng</div>
+                <div class="search-input-group center-vertical">
+                    <input class="search-input center-vertical" placeholder="Tìm kiếm" />
+                    <div class="search-icon center-vertical"></div>
+                    <div class="advanced-search-icon center-vertical"></div>
+                </div>
+
+                <div class="menu-group center-vertical">
+                    <div class="menu center-vertical menu-bar">Trang chủ</div>
+                    <div class="menu center-vertical menu-bar">Sản phẩm</div>
+                    <div class="menu center-vertical menu-bar">Forum</div>
+                </div>
+
+                <div class="profile-group center-vertical">
+                    <div class="profile">
+                        <div style="display: flex">
+                            <div class="notification center-vertical">
+                                <div class="number-of-notification-par">
+                                    <div class="number-of-notification">
+                                        3
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-name center-vertical">Hùng Ask</div>
+                            <div class="user-icon center-vertical"></div>
+                            <div class="menu-bar profile-propeties center-vertical" id="open-user-profile"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+
+                <div class="root-category">
+
+                    <div class="root-category-item grow">
+                        <img class="img-category-root" src="/images/buy.jpg" />
+                        <div class="info-category-group">
+
+                            <div style="background: #FF0E0A" class="category-item-title-background">
+
+                            </div>
+                            <div class="category-item-text">
+                                <div class="category-item-title">Mua hàng</div>
+                                <div class="category-item-decription">Xem những bài viết mua hàng</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="root-category-item grow">
+                        <img class="img-category-root" src="/images/sell.jpg" />
+                        <div class="info-category-group">
+                            <div style="background: rgb(78, 70, 10)" class="category-item-title-background">
+                            </div>
+                            <div class="category-item-text">
+                                <div class="category-item-title">Bán hàng</div>
+                                <div class="category-item-decription">Xem những bài viết bán hàng</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="root-category-item grow">
+                        <img class="img-category-root" src="/images/foreign.jpg" />
+                        <div class="info-category-group">
+                            <div style="background: #000000" class="category-item-title-background">
+                            </div>
+                            <div class="category-item-text">
+                                <div class="category-item-title">Thông tin xuất ngoại</div>
+                                <div class="category-item-decription">Xem những bài viết xuất ngoại</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="additional-infomation">
+
+                    <div class="featured-topic">
+
+                        <div class="featured-topic-title title-item">Bài viết nổi bật</div>
+
+                        <div class="featured-topic-items">
+
+                            <div class="topic-item">
+                                <div class="author-avatar"></div>
+                                <div class="topic-content">
+
+                                    <div class="topic-left-group">
+                                        <div class="topic-header">
+                                            Cần bán galaxy s8 tại nhật
+                                        </div>
+                                    </div>
+                                    <div class="statistics">
+                                        <div class="no-of-view-group statistics-item">
+                                            <div class="no-of-view statistics-text">1 tỷ</div>
+                                            <div class="no-of-view-icon statistics-icon"></div>
+                                        </div>
+                                        <div class="no-of-like-group statistics-item">
+                                            <div class="no-of-like statistics-text">1 tr</div>
+                                            <div class="no-of-like-icon statistics-icon"></div>
+                                        </div>
+
+                                        <div class="no-of-comment-group statistics-item">
+                                            <div class="no-of-comment statistics-text">1200</div>
+                                            <div class="no-of-comment-icon statistics-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="topic-item">
+                                <div class="author-avatar"></div>
+                                <div class="topic-content">
+
+                                    <div class="topic-left-group">
+                                        <div class="topic-header">
+                                            Cần bán galaxy s8 tại nhật
+                                        </div>
+                                    </div>
+                                    <div class="statistics">
+                                        <div class="no-of-view-group statistics-item">
+                                            <div class="no-of-view statistics-text">1 tỷ</div>
+                                            <div class="no-of-view-icon statistics-icon"></div>
+                                        </div>
+                                        <div class="no-of-like-group statistics-item">
+                                            <div class="no-of-like statistics-text">1 tr</div>
+                                            <div class="no-of-like-icon statistics-icon"></div>
+                                        </div>
+
+                                        <div class="no-of-comment-group statistics-item">
+                                            <div class="no-of-comment statistics-text">1200</div>
+                                            <div class="no-of-comment-icon statistics-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="topic-item">
+                                <div class="author-avatar"></div>
+                                <div class="topic-content">
+
+                                    <div class="topic-left-group">
+                                        <div class="topic-header">
+                                            Cần bán galaxy s8 tại nhật
+                                        </div>
+                                    </div>
+                                    <div class="statistics">
+                                        <div class="no-of-view-group statistics-item">
+                                            <div class="no-of-view statistics-text">1 tỷ</div>
+                                            <div class="no-of-view-icon statistics-icon"></div>
+                                        </div>
+                                        <div class="no-of-like-group statistics-item">
+                                            <div class="no-of-like statistics-text">1 tr</div>
+                                            <div class="no-of-like-icon statistics-icon"></div>
+                                        </div>
+
+                                        <div class="no-of-comment-group statistics-item">
+                                            <div class="no-of-comment statistics-text">1200</div>
+                                            <div class="no-of-comment-icon statistics-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="topic-item">
+                                <div class="author-avatar"></div>
+                                <div class="topic-content">
+
+                                    <div class="topic-left-group">
+                                        <div class="topic-header">
+                                            Cần bán galaxy s8 tại nhật
+                                        </div>
+                                    </div>
+                                    <div class="statistics">
+                                        <div class="no-of-view-group statistics-item">
+                                            <div class="no-of-view statistics-text">1 tỷ</div>
+                                            <div class="no-of-view-icon statistics-icon"></div>
+                                        </div>
+                                        <div class="no-of-like-group statistics-item">
+                                            <div class="no-of-like statistics-text">1 tr</div>
+                                            <div class="no-of-like-icon statistics-icon"></div>
+                                        </div>
+
+                                        <div class="no-of-comment-group statistics-item">
+                                            <div class="no-of-comment statistics-text">1200</div>
+                                            <div class="no-of-comment-icon statistics-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="topic-item">
+                                <div class="author-avatar"></div>
+                                <div class="topic-content">
+
+                                    <div class="topic-left-group">
+                                        <div class="topic-header">
+                                            Cần bán galaxy s8 tại nhật
+                                        </div>
+                                    </div>
+                                    <div class="statistics">
+                                        <div class="no-of-view-group statistics-item">
+                                            <div class="no-of-view statistics-text">1 tỷ</div>
+                                            <div class="no-of-view-icon statistics-icon"></div>
+                                        </div>
+                                        <div class="no-of-like-group statistics-item">
+                                            <div class="no-of-like statistics-text">1 tr</div>
+                                            <div class="no-of-like-icon statistics-icon"></div>
+                                        </div>
+
+                                        <div class="no-of-comment-group statistics-item">
+                                            <div class="no-of-comment statistics-text">1200</div>
+                                            <div class="no-of-comment-icon statistics-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="topic-item">
+                                <div class="author-avatar"></div>
+                                <div class="topic-content">
+
+                                    <div class="topic-left-group">
+                                        <div class="topic-header">
+                                            Cần bán galaxy s8 tại nhật
+                                        </div>
+                                    </div>
+                                    <div class="statistics">
+                                        <div class="no-of-view-group statistics-item">
+                                            <div class="no-of-view statistics-text">1 tỷ</div>
+                                            <div class="no-of-view-icon statistics-icon"></div>
+                                        </div>
+                                        <div class="no-of-like-group statistics-item">
+                                            <div class="no-of-like statistics-text">1 tr</div>
+                                            <div class="no-of-like-icon statistics-icon"></div>
+                                        </div>
+
+                                        <div class="no-of-comment-group statistics-item">
+                                            <div class="no-of-comment statistics-text">1200</div>
+                                            <div class="no-of-comment-icon statistics-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="topic-item">
+                                <div class="author-avatar"></div>
+                                <div class="topic-content">
+
+                                    <div class="topic-left-group">
+                                        <div class="topic-header">
+                                            Cần bán galaxy s8 tại nhật
+                                        </div>
+                                    </div>
+                                    <div class="statistics">
+                                        <div class="no-of-view-group statistics-item">
+                                            <div class="no-of-view statistics-text">1 tỷ</div>
+                                            <div class="no-of-view-icon statistics-icon"></div>
+                                        </div>
+                                        <div class="no-of-like-group statistics-item">
+                                            <div class="no-of-like statistics-text">1 tr</div>
+                                            <div class="no-of-like-icon statistics-icon"></div>
+                                        </div>
+
+                                        <div class="no-of-comment-group statistics-item">
+                                            <div class="no-of-comment statistics-text">1200</div>
+                                            <div class="no-of-comment-icon statistics-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="topic-item">
+                                <div class="author-avatar"></div>
+                                <div class="topic-content">
+
+                                    <div class="topic-left-group">
+                                        <div class="topic-header">
+                                            Cần bán galaxy s8 tại nhật
+                                        </div>
+                                    </div>
+                                    <div class="statistics">
+                                        <div class="no-of-view-group statistics-item">
+                                            <div class="no-of-view statistics-text">1 tỷ</div>
+                                            <div class="no-of-view-icon statistics-icon"></div>
+                                        </div>
+                                        <div class="no-of-like-group statistics-item">
+                                            <div class="no-of-like statistics-text">1 tr</div>
+                                            <div class="no-of-like-icon statistics-icon"></div>
+                                        </div>
+
+                                        <div class="no-of-comment-group statistics-item">
+                                            <div class="no-of-comment statistics-text">1200</div>
+                                            <div class="no-of-comment-icon statistics-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="right-content">
+                        <div class="new-topics">
+                            <div class="new-topic-title title-item">
+                                Bài đăng mới
+                            </div>
+                            <div class="new-topic-content">
+                                <div class="new-topic-item">
+                                    <div class="author-avatar"></div>
+                                    <div class="topic-content">
+                                        <div class="topic-left-group">
+                                            <div class="topic-header">
+                                                Cần bán galaxy s8 tại nhật
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="new-topic-item">
+                                    <div class="author-avatar"></div>
+                                    <div class="topic-content">
+                                        <div class="topic-left-group">
+                                            <div class="topic-header">
+                                                Bán iphone trung quốc
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="new-topic-item">
+                                    <div class="author-avatar"></div>
+                                    <div class="topic-content">
+                                        <div class="topic-left-group">
+                                            <div class="topic-header">
+                                                Bán nhà
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="new-topic-item">
+                                    <div class="author-avatar"></div>
+                                    <div class="topic-content">
+                                        <div class="topic-left-group">
+                                            <div class="topic-header">
+                                                Mua đồ
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="outstanding-seller">
+
+                            <div class="outstanding-seller-title title-item">
+                                Người bán nổi bật
+                            </div>
+
+                            <div class="out-standing-seller-items">
+                                <div class="out-standing-seller-item">
+                                    <div class="seller-avatar"></div>
+                                    <div class="out-standing-content">
+                                        <div class="seller-name">
+                                            Hùng Ask
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="out-standing-seller-item">
+                                    <div class="seller-avatar"></div>
+                                    <div class="out-standing-content">
+                                        <div class="seller-name">
+                                            Tú nguyễn
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="out-standing-seller-item">
+                                    <div class="seller-avatar"></div>
+                                    <div class="out-standing-content">
+                                        <div class="seller-name">
+                                            Unknown
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="out-standing-seller-item">
+                                    <div class="seller-avatar"></div>
+                                    <div class="out-standing-content">
+                                        <div class="seller-name">
+                                            Tú nguyễn
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="out-standing-seller-item">
+                                    <div class="seller-avatar"></div>
+                                    <div class="out-standing-content">
+                                        <div class="seller-name">
+                                            Unknown
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="out-standing-seller-item">
+                                    <div class="seller-avatar"></div>
+                                    <div class="out-standing-content">
+                                        <div class="seller-name">
+                                            Tú nguyễn
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="out-standing-seller-item">
+                                    <div class="seller-avatar"></div>
+                                    <div class="out-standing-content">
+                                        <div class="seller-name">
+                                            Unknown
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var catItems = $('.root-category-item');
+
+        $.each(catItems,
+            function (key, value) {
+                var catItem = $(value);
+
+                catItem.mouseenter(function () {
+                    var catItemDecription = $($(this).find('.category-item-decription')[0]);
+                    var catItemText = $($(this).find('.category-item-text')[0]);
+                    // catItemText.css('margin-bottom', 'auto');
+                    catItemDecription.css('display', 'table');
+
+                    catItemText.animate({
+                        'margin-bottom': '40px'
+                    }, 200);
+
+                    var catItemTitleBackground = $($(this).find('.category-item-title-background')[0]);
+                    catItemTitleBackground.animate({
+                        height: "100%"
+                    }, 200);
+                }).mouseleave(function () {
+                    var catItemDecription = $($(this).find('.category-item-decription')[0]);
+                    var catItemText = $($(this).find('.category-item-text')[0]);
+                    catItemText.animate({
+                        'margin-bottom': '16px'
+                    }, 200);
+                    catItemDecription.css('display', 'none');
+                    var catItemTitleBackground = $($(this).find('.category-item-title-background')[0]);
+                    catItemTitleBackground.animate({
+                        height: "35%"
+                    }, 200);
+                });
+
+
+                //$(catItems[key]).mouseout(function (e) {
+                //    e.preventDefault();
+                //    var catItemDecription = $($(this).find('.category-item-decription')[0]);
+                //    if (catItemDecription.css('display') !== 'none') {
+                //        catItemDecription.css('display', 'none');
+                //        var catItemTitleBackground = $($(this).find('.category-item-title-background')[0]);
+                //        catItemTitleBackground.animate({
+                //            height: "35%"
+                //        }, 100);
+                //    }
+                //});
+
+                //$(catItems[key]).mouseover(function (e) {
+                //    e.preventDefault();
+                //    var catItemDecription = $($(this).find('.category-item-decription')[0]);
+                //    if (catItemDecription.css('display') === 'none') {
+                //        catItemDecription.css('display', 'table');
+                //        var catItemTitleBackground = $($(this).find('.category-item-title-background')[0]);
+                //        catItemTitleBackground.animate({
+                //            height: "100%"
+                //        }, 100);
+                //    }
+                //  });
+            });
+
+
+        $('#open-user-profile').click(function(e) {
+            e.preventDefault();
+            $('#user-profile').css('display', 'block');
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).closest($('#open-user-profile')).length === 0 && $(e.target).closest($('#user-profile')).length === 0) {
+                $('#user-profile').css('display', 'none');
+            }
+        });
+
+    </script>
+
+
+</body>
